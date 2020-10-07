@@ -1,7 +1,7 @@
 # Info about this package.
 [package]
 name          = "barebones-watchface"
-version       = "0.3.0"
+version       = "1.0.0"
 authors       = ["Lee Lup Yuen <luppy@appkaki.com>"]
 edition       = "2018"
 description   = "Barebones Watch Face for Mynewt on PineTime Smart Watch"
@@ -14,10 +14,10 @@ license       = "Apache-2.0"
 
 # External Rust libraries used by this module.  See crates.io.
 [dependencies]
-pinetime-macros    = "0.4.0"  # Safe Wrapper Macros for Mynewt on PineTime Smart Watch: https://crates.io/crates/pinetime-macros
-pinetime-mynewt    = "0.2.0"  # Mynewt Bindings for PineTime Smart Watch: https://crates.io/crates/pinetime-mynewt
-pinetime-lvgl      = "0.4.0"  # LVGL Bindings for Mynewt on PineTime Smart Watch: https://crates.io/crates/pinetime-lvgl
-pinetime-watchface = "0.3.0"  # Watch Face Framework for Rust + Mynewt on PineTime Smart Watch: https://crates.io/crates/pinetime-watchface
+pinetime-macros    = "1.0.0"  # Safe Wrapper Macros for Mynewt on PineTime Smart Watch: https://crates.io/crates/pinetime-macros
+pinetime-mynewt    = "1.0.0"  # Mynewt Bindings for PineTime Smart Watch: https://crates.io/crates/pinetime-mynewt
+pinetime-lvgl      = "1.0.0"  # LVGL Bindings for Mynewt on PineTime Smart Watch: https://crates.io/crates/pinetime-lvgl
+pinetime-watchface = "1.0.0"  # Watch Face Framework for Rust + Mynewt on PineTime Smart Watch: https://crates.io/crates/pinetime-watchface
 arrayvec           = { version = "0.5.1", default-features = false }
 cortex-m           = { version = "0.6.1", features = [ "inline-asm" ] }  # Arm Cortex-M utilities: https://crates.io/crates/cortex-m
 cstr_core          = "0.1.2"  # String utilities from cstr_core library: https://crates.io/crates/cstr_core
