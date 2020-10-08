@@ -23,7 +23,6 @@ type WatchFaceType = barebones_watchface::BarebonesWatchFace;
 
 Refer to the article...
 
-["Bluetooth Time Sync, Rust Watch Faces and LVGL on PineTime Mynewt
-"](https://lupyuen.github.io/pinetime-rust-mynewt/articles/timesync)
+["Bluetooth Time Sync, Rust Watch Faces and LVGL on PineTime Mynewt"](https://lupyuen.github.io/pinetime-rust-mynewt/articles/timesync)
 
 TODO: Preview watch face in web browser with WebAssembly

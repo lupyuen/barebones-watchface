@@ -23,19 +23,22 @@
 #![feature(proc_macro_hygiene)]         //  Allow Procedural Macros like `run!()`
 #![feature(exclusive_range_pattern)]    //  Allow ranges like `0..128` in `match` statements
 
-//  Declare the libraries that contain macros
-extern crate mynewt;                    //  Declare the Mynewt library
-extern crate macros as mynewt_macros;   //  Declare the Mynewt Procedural Macros library
+pub use watchface;  //  Export the Watch Face Framework
 
 use core::{
     fmt::Write,
     ptr,
 };
-use mynewt::{
+use macros::strn;
+use watchface::lvgl::mynewt::{
     result::*,
     Strn,
 };
-use mynewt_macros::strn;
+use watchface::lvgl::{
+    self,
+    core::obj,
+    objx::label,
+};
 use watchface::{
     BluetoothState,
     String,
@@ -44,10 +47,6 @@ use watchface::{
     WatchFaceTime,
     new_string,
     to_strn,
-};
-use lvgl::{
-    core::obj,
-    objx::label,
 };
 
 ///////////////////////////////////////////////////////////////////////////////
