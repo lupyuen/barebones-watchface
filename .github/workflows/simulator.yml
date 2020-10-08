@@ -1,0 +1,263 @@
+# GitHub Actions Workflow to build WebAssembly Simulator for Rust on Mynewt
+# See https://github.com/AppKaki/lvgl-wasm/blob/mynewt/README.md
+# TODO: Sync with https://github.com/AppKaki/lvgl-wasm/blob/mynewt/.github/workflows/simulator.yml
+
+# Name of this Workflow
+name: Simulate PineTime Firmware
+
+# When to run this Workflow...
+on:
+
+  # Run this Workflow when files are updated (Pushed) in the "master" Branch
+  push:
+    branches: [ master, mynewt ]
+    
+  # Also run this Workflow when a Pull Request is created or updated in the "master" Branch
+  pull_request:
+    branches: [ master, mynewt ]
+
+# Steps to run for the Workflow
+jobs:
+  build:
+
+    # Run these steps on Ubuntu
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v2
+
+    # - name: Fetch cache for Rust Toolchain
+    #   id:   cache-rust
+    #   uses: actions/cache@v2
+    #   with:
+    #     path: |
+    #       ~/.cargo/registry
+    #       ~/.cargo/git
+    #       target
+    #     key: ${{ runner.os }}-cargo-${{ hashFiles('**/Cargo.lock') }}
+
+    - name: Install Rust Toolchain for emscripten
+      run:  |
+        rustup default nightly
+        rustup target add wasm32-unknown-emscripten
+
+    - name: Check cache for emscripten
+      id:   cache-emsdk
+      uses: actions/cache@v2
+      env:
+        cache-name: cache-emsdk
+      with:
+        path: /tmp/emsdk
+        key:  ${{ runner.os }}-build-${{ env.cache-name }}
+        restore-keys: ${{ runner.os }}-build-${{ env.cache-name }}
+
+    - name: Install emscripten
+      if:   steps.cache-emsdk.outputs.cache-hit != 'true'  # Install emscripten if not found in cache
+      run:  |
+        # Based on https://emscripten.org/docs/getting_started/downloads.html
+        cd /tmp
+
+        # Get the emsdk repo
+        git clone https://github.com/emscripten-core/emsdk.git
+
+        # Enter that directory
+        cd emsdk
+
+        # Download and install the latest SDK tools.
+        ./emsdk install latest
+
+        # Make the "latest" SDK "active" for the current user. (writes .emscripten file)
+        ./emsdk activate latest
+
+        # Activate PATH and other environment variables in the current terminal
+        source ./emsdk_env.sh
+
+        # Show version
+        emcc --version
+        emcc --version        
+
+    - name: Check cache for wabt
+      id:   cache-wabt
+      uses: actions/cache@v2
+      env:
+        cache-name: cache-wabt
+      with:
+        path: /tmp/wabt
+        key:  ${{ runner.os }}-build-${{ env.cache-name }}
+        restore-keys: ${{ runner.os }}-build-${{ env.cache-name }}
+
+    - name: Install wabt
+      if:   steps.cache-wabt.outputs.cache-hit != 'true'  # Install wabt if not found in cache
+      run:  |
+        cd /tmp
+        git clone --recursive https://github.com/WebAssembly/wabt
+        cd wabt
+        mkdir build
+        cd build
+        cmake ..
+        cmake --build .
+
+    - name: Checkout Rust+LVGL for WebAssembly
+      run:  |
+        cd /tmp
+        git clone --branch mynewt https://github.com/AppKaki/lvgl-wasm
+
+    - name: Prebuild Rust+LVGL for WebAssembly
+      run:  |
+        # Add emscripten and wabt to the PATH
+        source /tmp/emsdk/emsdk_env.sh
+        export PATH=$PATH:/tmp/wabt/build
+        cd /tmp/lvgl-wasm
+
+        # Build Rust app, ignore the error:
+        # error[E0432]: unresolved import `ad`
+        # --> /home/runner/.cargo/registry/src/github.com-1ecc6299db9ec823/cty-0.1.5/src/lib.rs:8:9
+        # pub use ad::*;
+        # ^^ maybe a missing crate `ad`?
+        # TODO: Fix this workaround and the next step
+
+        cargo build || ls -l $HOME/.cargo/registry/src/github.com-*/cty-0.1.5/src/lib.rs
+
+        # Will be patched in the next step
+
+    - name: Patch Rust cty crate for WebAssembly
+      run:  |
+        # Patch the previous step: Change $HOME/.cargo/registry/src/github.com-*/cty-0.1.5/src/lib.rs
+        # From
+        #   target_arch = "arm"
+        # To
+        #   target_arch = "arm", target_arch = "wasm32"
+        # TODO: Fix this workaround and the previous step
+
+        cat $HOME/.cargo/registry/src/github.com-*/cty-0.1.5/src/lib.rs \
+            | sed 's/target_arch = "arm"/target_arch = "arm", target_arch = "wasm32"/' \
+            >/tmp/lib.rs
+        cp /tmp/lib.rs $HOME/.cargo/registry/src/github.com-*/cty-0.1.5/src/lib.rs
+        rm /tmp/lib.rs
+        cat $HOME/.cargo/registry/src/github.com-*/cty-0.1.5/src/lib.rs
+        
+    - name: Copy Rust Watch Face into Rust+LVGL for WebAssembly
+      run:  |
+        # Add emscripten and wabt to the PATH
+        source /tmp/emsdk/emsdk_env.sh
+        export PATH=$PATH:/tmp/wabt/build
+
+        # Replace Rust+LVGL folder mynewt/watchface by this repo
+        mkdir /tmp/lvgl-wasm/mynewt/watchface/
+        cp -r . /tmp/lvgl-wasm/mynewt/watchface/
+
+        # Go to the LVGL folder
+        cd /tmp/lvgl-wasm
+
+        # TODO: Find the watchface crate name e.g. my-watchface
+        # Search mynewt/watchface/Cargo.toml for
+        #   name = "my-watchface"
+        # grep "name =" mynewt/watchface/Cargo.toml
+
+        # TODO: Find the watchface struct name e.g. MyWatchface
+        # Search all files *.rs in mynewt/watchface for
+        #   impl WatchFace for MyWatchface {
+        # grep "impl WatchFace" mynewt/watchface/src/lib.rs
+
+        # TODO: Change mynewt/wasm/Cargo.toml from
+        #   barebones-watchface = "1.0.2"
+        # to
+        #   my-watchface = { path = "../watchface" }
+
+        # TODO: Copy and overwrite crates from mynewt/watchface/Cargo.toml to mynewt/wasm/Cargo.toml
+        #   pinetime-macros     = "1.0.2"
+        #   pinetime-watchface  = "1.0.2"
+
+        # cat mynewt/wasm/Cargo.toml \
+        #     | sed 's/crate-type = \["staticlib"\]/crate-type = \["lib"\]/' \
+        #     >mynewt/wasm/Cargo.toml.new
+        # cp mynewt/wasm/Cargo.toml.new mynewt/wasm/Cargo.toml
+        # rm mynewt/wasm/Cargo.toml.new
+        # cat mynewt/wasm/Cargo.toml
+
+        # TODO: Change mynewt/wasm/src/lib.rs from
+        #   use barebones_watchface::watchface::lvgl::mynewt::fill_zero;
+        #   use barebones_watchface::watchface::{self, WatchFace};
+        #   type WatchFaceType = barebones_watchface::BarebonesWatchFace;
+        # to
+        #   use my_watchface::watchface::lvgl::mynewt::fill_zero;
+        #   use my_watchface::watchface::{self, WatchFace};
+        #   type WatchFaceType = my_watchface::MyWatchFace;
+        # Change crate name from "-" to "_"
+
+        # cat mynewt/wasm/src/lib.rs \
+        #     | sed 's/crate-type = \["staticlib"\]/crate-type = \["lib"\]/' \
+        #     >mynewt/wasm/src/lib.rs.new
+        # cp mynewt/wasm/src/lib.rs.new mynewt/wasm/src/lib.rs
+        # rm mynewt/wasm/src/lib.rs.new
+        # cat mynewt/wasm/src/lib.rs
+
+    - name: Build Rust+LVGL for WebAssembly
+      run:  |
+        # Add emscripten and wabt to the PATH
+        source /tmp/emsdk/emsdk_env.sh
+        export PATH=$PATH:/tmp/wabt/build
+        cd /tmp/lvgl-wasm
+
+        # Build Rust+LVGL app: wasm/lvgl.html, lvgl.js, lvgl.wasm
+        cargo build
+        make -f mynewt/Makefile
+
+        # Dump the WebAssembly modules
+        wasm-objdump -x wasm/lvgl.wasm >wasm/lvgl.txt
+
+        # Rename the HTML files so we don't overwrite the updates
+        mv wasm/lvgl.html wasm/lvgl.old.html
+
+    - name: Show files
+      run:  set ; pwd ; ls -l /tmp/lvgl-wasm
+
+    - name: Copy WebAssembly to GitHub Pages
+      run:  |
+        if [ ! -d docs ]; then
+          mkdir docs
+        fi
+        export src=/tmp/lvgl-wasm
+        export docs=$src/docs
+        export wasm=$src/wasm
+        cp \
+          $docs/lvgl.html \
+          $wasm/*.html \
+          $wasm/*.js \
+          $wasm/*.wasm \
+          $wasm/*.txt \
+          docs
+
+    - name: Commit GitHub Pages
+      uses: EndBug/add-and-commit@v4.4.0
+      with:
+        # Arguments for the git add command
+        add: docs
+        # The name of the user that will be displayed as the author of the commit
+        # author_name: # optional
+        # The email of the user that will be displayed as the author of the commit
+        # author_email: # optional
+        # The directory where your repository is located. You should use actions/checkout first to set it up
+        # cwd: # optional, default is .
+        # Whether to use the force option on git add, in order to bypass eventual gitignores
+        # force: # optional, default is false
+        # Whether to use the signoff option on git commit
+        # signoff: # optional, default is false
+        # The message for the commit
+        # message: # optional, default is Commit from GitHub Actions
+        # Name of the branch to use, if different from the one that triggered the workflow
+        # ref: # optional
+        # Arguments for the git rm command
+        # remove: # optional, default is 
+        # The name of the tag to add to the new commit
+        # tag: # optional, default is 
+
+    - name: Upload Outputs
+      uses: actions/upload-artifact@v2
+      with:
+        name: wasm
+        path: |
+          /tmp/lvgl-wasm/wasm/*.html
+          /tmp/lvgl-wasm/wasm/*.js
+          /tmp/lvgl-wasm/wasm/*.wasm
+          /tmp/lvgl-wasm/wasm/*.txt
