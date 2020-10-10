@@ -149,6 +149,9 @@ jobs:
         sudo apt install jq
         jq '.resolve.root' /tmp/metadata.json
 
+        # Returns: "barebones-watchface 1.0.2 (path+file:///home/runner/work/barebones-watchface/barebones-watchface)"
+
+
         # Replace Rust+LVGL folder mynewt/watchface by this repo
         mkdir /tmp/lvgl-wasm/mynewt/watchface/
         cp -r . /tmp/lvgl-wasm/mynewt/watchface/
