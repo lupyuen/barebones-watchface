@@ -146,6 +146,7 @@ jobs:
         cargo metadata --format-version=1 >/tmp/metadata.json
 
         # TODO: Find the watchface crate name e.g. my-watchface
+        sudo apt install jq
         jq '.resolve.root' /tmp/metadata.json
 
         # Replace Rust+LVGL folder mynewt/watchface by this repo
