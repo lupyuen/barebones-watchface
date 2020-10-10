@@ -145,6 +145,9 @@ jobs:
         # Generate the Rust Metadata
         cargo metadata --format-version=1 >/tmp/metadata.json
 
+        # TODO: Find the watchface crate name e.g. my-watchface
+        jq '.resolve.root' /tmp/metadata.json
+
         # Replace Rust+LVGL folder mynewt/watchface by this repo
         mkdir /tmp/lvgl-wasm/mynewt/watchface/
         cp -r . /tmp/lvgl-wasm/mynewt/watchface/
