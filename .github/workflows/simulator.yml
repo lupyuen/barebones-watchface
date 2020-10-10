@@ -142,6 +142,9 @@ jobs:
         source /tmp/emsdk/emsdk_env.sh
         export PATH=$PATH:/tmp/wabt/build
 
+        # Generate the Rust Metadata
+        cargo metadata --format-version=1 >/tmp/metadata.json
+
         # Replace Rust+LVGL folder mynewt/watchface by this repo
         mkdir /tmp/lvgl-wasm/mynewt/watchface/
         cp -r . /tmp/lvgl-wasm/mynewt/watchface/
@@ -261,3 +264,4 @@ jobs:
           /tmp/lvgl-wasm/wasm/*.js
           /tmp/lvgl-wasm/wasm/*.wasm
           /tmp/lvgl-wasm/wasm/*.txt
+          /tmp/metadata.json
