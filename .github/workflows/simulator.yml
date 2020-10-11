@@ -170,11 +170,6 @@ jobs:
         # Go to the LVGL folder
         cd /tmp/lvgl-wasm
 
-        # TODO: Find the watchface crate name e.g. my-watchface
-        # Search mynewt/watchface/Cargo.toml for
-        #   name = "my-watchface"
-        # grep "name =" mynewt/watchface/Cargo.toml
-
         # TODO: Find the watchface struct name e.g. MyWatchface
         # Search all files *.rs in mynewt/watchface for
         #   impl WatchFace for MyWatchface {
@@ -183,7 +178,7 @@ jobs:
         # TODO: Change mynewt/wasm/Cargo.toml from
         #   barebones-watchface = "1.0.2"
         # to
-        #   my-watchface = { path = "../watchface" }
+        #   my-watchface = { path = "/home/runner/work/my-watchface/my-watchface" }
 
         # TODO: Copy and overwrite crates from mynewt/watchface/Cargo.toml to mynewt/wasm/Cargo.toml
         #   pinetime-macros     = "1.0.2"
