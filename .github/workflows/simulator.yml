@@ -145,12 +145,23 @@ jobs:
         # Generate the Rust Metadata
         cargo metadata --format-version=1 >/tmp/metadata.json
 
-        # TODO: Find the watchface crate name e.g. my-watchface
+        # Get the watchface crate name, version and path from the crate metadata
         sudo apt install jq
-        jq '.resolve.root' /tmp/metadata.json
-
+        crate_root=`jq '.resolve.root' /tmp/metadata.json`
+        echo crate_root=$crate_root
         # Returns: "barebones-watchface 1.0.2 (path+file:///home/runner/work/barebones-watchface/barebones-watchface)"
 
+        # Extract watchface crate name e.g. my-watchface
+        crate_name=`expr match "$crate_root" '\([^ ]*\) '`
+        echo crate_name=$crate_name
+
+        # Extract watchface crate version e.g. 1.0.2
+        crate_version=`expr match "$crate_root" '[^ ]* \([^ ]*\) '`
+        echo crate_version=$crate_version
+
+        # Extract watchface crate path e.g. /home/runner/work/my-watchface/my-watchface
+        crate_path=`expr match "$crate_root" '.*path+file://\([^ ]*\))'`
+        echo crate_path=$crate_path
 
         # Replace Rust+LVGL folder mynewt/watchface by this repo
         mkdir /tmp/lvgl-wasm/mynewt/watchface/
