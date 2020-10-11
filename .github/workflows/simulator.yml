@@ -155,6 +155,10 @@ jobs:
         crate_name=`expr match "$crate_root" '\"\([^ ]*\) '`
         echo crate_name=$crate_name
 
+        # Replace all "-" in crate name to "_" e.g. my_watchface
+        crate_name_underscore=${crate_name//-/_}
+        echo crate_name_underscore=$crate_name_underscore
+
         # Extract watchface crate version e.g. 1.0.2
         crate_version=`expr match "$crate_root" '[^ ]* \([^ ]*\) '`
         echo crate_version=$crate_version
