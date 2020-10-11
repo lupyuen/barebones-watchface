@@ -194,10 +194,9 @@ jobs:
         cat mynewt/wasm/Cargo.toml \
             | sed "s/^barebones-watchface.*$/$crate_name = { path = \"$crate_path_escaped\" }/" \
             >mynewt/wasm/Cargo.toml.new
-        cat mynewt/wasm/Cargo.toml.new
-        # cp mynewt/wasm/Cargo.toml.new mynewt/wasm/Cargo.toml
-        # rm mynewt/wasm/Cargo.toml.new
-        # cat mynewt/wasm/Cargo.toml
+        cp mynewt/wasm/Cargo.toml.new mynewt/wasm/Cargo.toml
+        rm mynewt/wasm/Cargo.toml.new
+        cat mynewt/wasm/Cargo.toml
 
         # TODO: Change mynewt/wasm/src/lib.rs from
         #   use barebones_watchface::watchface::lvgl::mynewt::fill_zero;
