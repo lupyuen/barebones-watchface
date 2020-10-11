@@ -136,7 +136,7 @@ jobs:
         rm /tmp/lib.rs
         cat $HOME/.cargo/registry/src/github.com-*/cty-0.1.5/src/lib.rs
         
-    - name: Copy Rust Watch Face into Rust+LVGL for WebAssembly
+    - name: Inject Rust Watch Face into Rust+LVGL for WebAssembly
       run:  |
         # Add emscripten and wabt to the PATH
         source /tmp/emsdk/emsdk_env.sh
