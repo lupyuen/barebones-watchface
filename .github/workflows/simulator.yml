@@ -172,6 +172,7 @@ jobs:
         shopt -s globstar
         ls $crate_path/src/**/*.rs
         matches=`grep -r "impl WatchFace" $crate_path/src/**/*.rs`
+        echo matches=$matches
         # Returns: impl WatchFace for MyWatchface {
 
         # Extract the watchface struct name e.g. MyWatchface
@@ -185,10 +186,6 @@ jobs:
         #   barebones-watchface = "1.0.2"
         # to
         #   my-watchface = { path = "/home/runner/work/my-watchface/my-watchface" }
-
-        # TODO: Copy and overwrite crates from mynewt/watchface/Cargo.toml to mynewt/wasm/Cargo.toml
-        #   pinetime-macros     = "1.0.2"
-        #   pinetime-watchface  = "1.0.2"
 
         # cat mynewt/wasm/Cargo.toml \
         #     | sed 's/crate-type = \["staticlib"\]/crate-type = \["lib"\]/' \
