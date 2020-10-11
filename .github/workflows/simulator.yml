@@ -167,17 +167,15 @@ jobs:
         crate_path=`expr match "$crate_root" '.*path+file://\([^ ]*\))'`
         echo crate_path=$crate_path
 
-        # Replace Rust+LVGL folder mynewt/watchface by this repo
-        mkdir /tmp/lvgl-wasm/mynewt/watchface/
-        cp -r . /tmp/lvgl-wasm/mynewt/watchface/
+        # Find the watchface struct name e.g. MyWatchface
+        # Search all files *.rs in crate path src for
+        #   impl WatchFace for MyWatchface {
+        shopt -s globstar
+        ls $crate_path/src/**/*.rs
+        grep -r "impl WatchFace" $crate_path/src/**/*.rs
 
         # Go to the LVGL folder
         cd /tmp/lvgl-wasm
-
-        # TODO: Find the watchface struct name e.g. MyWatchface
-        # Search all files *.rs in mynewt/watchface for
-        #   impl WatchFace for MyWatchface {
-        # grep "impl WatchFace" mynewt/watchface/src/lib.rs
 
         # TODO: Change mynewt/wasm/Cargo.toml from
         #   barebones-watchface = "1.0.2"
