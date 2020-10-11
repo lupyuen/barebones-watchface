@@ -1066,65 +1066,65 @@ Function[1074]:
  - func[1019] sig=8 <watchface::get_active_screen::h8c593837a19c02ad>
  - func[1020] sig=4 <watchface::to_strn::h8dceaa41d92e1587>
  - func[1021] sig=3 <core::fmt::ArgumentV1::new::hf905266dd3da2707>
- - func[1022] sig=0 <_$LT$$RF$T$u20$as$u20$core..fmt..Display$GT$::fmt::h54eb6f59809fb5e8>
- - func[1023] sig=0 <_$LT$$LP$$RP$$u20$as$u20$core..fmt..Debug$GT$::fmt::h8e451130cb8eb9a9>
- - func[1024] sig=3 <core::fmt::ArgumentV1::new::h1de6dd324cdc724f>
- - func[1025] sig=3 <core::fmt::ArgumentV1::new::h3bc4195336b05dff>
- - func[1026] sig=3 <core::fmt::ArgumentV1::new::h5a3d08334b6053e8>
- - func[1027] sig=3 <core::fmt::ArgumentV1::new::h8609c8668a600b50>
- - func[1028] sig=3 <core::fmt::ArgumentV1::new::hab537aa7e31627a5>
- - func[1029] sig=3 <core::fmt::ArgumentV1::new::hbb2376779e25f677>
- - func[1030] sig=12 <core::fmt::Arguments::new_v1_formatted::h59593add6007b173>
- - func[1031] sig=11 <core::fmt::Arguments::new_v1::hc19daa359cec02d6>
- - func[1032] sig=3 <core::str::converts::from_utf8_unchecked_mut::h83adb346ae999853>
- - func[1033] sig=6 <core::char::methods::encode_utf8_raw::h984ba4237035a900>
- - func[1034] sig=1 <core::char::methods::len_utf8::h3a266cae26999e2c>
- - func[1035] sig=6 <core::char::methods::_$LT$impl$u20$char$GT$::encode_utf8::h675f58b58608ea70>
- - func[1036] sig=1 <core::char::methods::_$LT$impl$u20$char$GT$::len_utf8::h6e580b4e8e221e72>
- - func[1037] sig=1 <core::clone::impls::_$LT$impl$u20$core..clone..Clone$u20$for$u20$u8$GT$::clone::h4223da7a12831e97>
- - func[1038] sig=4 <heapless::vec::_$LT$impl$u20$heapless..i..Vec$LT$generic_array..GenericArray$LT$T$C$N$GT$$GT$$GT$::as_mut_slice::hd698af908e64fe9c>
- - func[1039] sig=4 <heapless::vec::_$LT$impl$u20$heapless..i..Vec$LT$generic_array..GenericArray$LT$T$C$N$GT$$GT$$GT$::push_unchecked::h9b46045a42fef503>
- - func[1040] sig=2 <heapless::vec::_$LT$impl$u20$heapless..i..Vec$LT$generic_array..GenericArray$LT$T$C$N$GT$$GT$$GT$::extend_from_slice::h9fd5680b570210ee>
- - func[1041] sig=1 <heapless::vec::_$LT$impl$u20$heapless..i..Vec$LT$generic_array..GenericArray$LT$T$C$N$GT$$GT$$GT$::capacity::h765ffbbecfad0f39>
- - func[1042] sig=3 <heapless::vec::_$LT$impl$u20$heapless..i..Vec$LT$generic_array..GenericArray$LT$T$C$N$GT$$GT$$GT$::push::ha62b161d7c0938dd>
- - func[1043] sig=5 <heapless::vec::_$LT$impl$u20$heapless..i..Vec$LT$generic_array..GenericArray$LT$T$C$N$GT$$GT$$GT$::clear::hadc6909a82158d6d>
- - func[1044] sig=4 <heapless::vec::_$LT$impl$u20$heapless..i..Vec$LT$generic_array..GenericArray$LT$T$C$N$GT$$GT$$GT$::truncate::h4624c50b09409c4e>
- - func[1045] sig=5 <core::ptr::drop_in_place::h52d8c1f9fe9926f8>
- - func[1046] sig=5 <core::ptr::drop_in_place::h99d1d42b1abc4d67>
- - func[1047] sig=5 <core::ptr::drop_in_place::hefe9b8a2ae8a09d9>
- - func[1048] sig=0 <core::fmt::Write::write_fmt::he7382ebcf3613eba>
- - func[1049] sig=0 <_$LT$$RF$mut$u20$W$u20$as$u20$core..fmt..Write$GT$::write_char::h28b2e3bab7de8319>
- - func[1050] sig=0 <_$LT$heapless..string..String$LT$N$GT$$u20$as$u20$core..fmt..Write$GT$::write_char::h640130ca252f855d>
- - func[1051] sig=0 <_$LT$$RF$mut$u20$W$u20$as$u20$core..fmt..Write$GT$::write_fmt::h5d224eb5cc4c9559>
- - func[1052] sig=2 <_$LT$$RF$mut$u20$W$u20$as$u20$core..fmt..Write$GT$::write_str::h166d4169fc2ffd4d>
- - func[1053] sig=2 <_$LT$heapless..string..String$LT$N$GT$$u20$as$u20$core..fmt..Write$GT$::write_str::hef3f88b1f565fec3>
- - func[1054] sig=0 <heapless::string::String$LT$N$GT$::push::h54a0db2f26d541be>
- - func[1055] sig=7 <_$LT$heapless..string..String$LT$N$GT$$u20$as$u20$core..fmt..Write$GT$::write_char::_$u7b$$u7b$closure$u7d$$u7d$::h02e7df80aa14789a>
- - func[1056] sig=2 <heapless::string::String$LT$N$GT$::push_str::hb314363501940665>
- - func[1057] sig=7 <_$LT$heapless..string..String$LT$N$GT$$u20$as$u20$core..fmt..Write$GT$::write_str::_$u7b$$u7b$closure$u7d$$u7d$::hae11c3169dea0162>
- - func[1058] sig=0 <_$LT$heapless..string..String$LT$N$GT$$u20$as$u20$core..fmt..Display$GT$::fmt::h7e9d00f8e23c61ac>
- - func[1059] sig=3 <_$LT$heapless..string..String$LT$N$GT$$u20$as$u20$core..convert..From$LT$$RF$str$GT$$GT$::from::he47c67df16828418>
- - func[1060] sig=5 <heapless::string::String$LT$N$GT$::new::hc7ad6e50194cd1b5>
- - func[1061] sig=5 <heapless::string::String$LT$N$GT$::push::_$u7b$$u7b$closure$u7d$$u7d$::h07e1256fcacdfefa>
- - func[1062] sig=5 <heapless::string::String$LT$N$GT$::clear::h3354da5f6c9455db>
- - func[1063] sig=6 <core::result::Result$LT$T$C$E$GT$::expect::hd542b21e13bcab49>
- - func[1064] sig=4 <core::result::Result$LT$T$C$E$GT$::unwrap::h11e5ad4aedd4704e>
- - func[1065] sig=1 <core::result::Result$LT$T$C$E$GT$::map_err::h7fb3c4b4716a0d90>
- - func[1066] sig=1 <core::result::Result$LT$T$C$E$GT$::map_err::h9792fba49013518d>
- - func[1067] sig=0 <core::result::Result$LT$T$C$E$GT$::map_err::hbf01bb3ab98c63c5>
- - func[1068] sig=4 <_$LT$core..result..Result$LT$T$C$E$GT$$u20$as$u20$core..ops..try..Try$GT$::from_error::hc96c8fd54707bb98>
- - func[1069] sig=13 <_$LT$core..result..Result$LT$T$C$E$GT$$u20$as$u20$core..ops..try..Try$GT$::into_result::h2516534a55c5ddc1>
- - func[1070] sig=0 <_$LT$watchface..BluetoothState$u20$as$u20$core..cmp..PartialEq$GT$::eq::h8c4245a555e5175a>
- - func[1071] sig=5 <_$LT$barebones_watchface..BarebonesWatchFace$u20$as$u20$watchface..WatchFace$GT$::new::hd357ba16458d141c>
- - func[1072] sig=0 <_$LT$barebones_watchface..BarebonesWatchFace$u20$as$u20$watchface..WatchFace$GT$::update::h92ba78df24e48147>
- - func[1073] sig=0 <barebones_watchface::BarebonesWatchFace::update_date_time::h16b874fef0edaea5>
- - func[1074] sig=0 <barebones_watchface::BarebonesWatchFace::update_bluetooth::h94f03cda28065740>
- - func[1075] sig=0 <barebones_watchface::BarebonesWatchFace::update_power::h101e943cabb0da09>
- - func[1076] sig=4 <barebones_watchface::get_day_name::h3394ce739ae40ec1>
- - func[1077] sig=4 <barebones_watchface::get_month_name::h29db0d71ec432e8f>
- - func[1078] sig=1 <barebones_watchface::convert_battery_voltage::h71a372e111476ea7>
- - func[1079] sig=5 <core::ptr::drop_in_place::h1398cb182c579158>
- - func[1080] sig=11 <core::result::Result$LT$T$C$E$GT$::expect::h5d757c5efe0b1ade>
+ - func[1022] sig=0 <_$LT$$RF$T$u20$as$u20$core..fmt..Display$GT$::fmt::hd20b06b5472adfdc>
+ - func[1023] sig=0 <_$LT$$LP$$RP$$u20$as$u20$core..fmt..Debug$GT$::fmt::h5cb01ae543f37e5d>
+ - func[1024] sig=3 <core::fmt::ArgumentV1::new::h6c3e4cc3e2dd3cf4>
+ - func[1025] sig=3 <core::fmt::ArgumentV1::new::h91b8145fd2c84e9e>
+ - func[1026] sig=3 <core::fmt::ArgumentV1::new::hbd9d0bc886bc2a35>
+ - func[1027] sig=3 <core::fmt::ArgumentV1::new::hcb9b1bbd814fba34>
+ - func[1028] sig=3 <core::fmt::ArgumentV1::new::he775112b3ba9d80c>
+ - func[1029] sig=3 <core::fmt::ArgumentV1::new::he775710d269171a3>
+ - func[1030] sig=12 <core::fmt::Arguments::new_v1_formatted::h93914646bd0c4143>
+ - func[1031] sig=11 <core::fmt::Arguments::new_v1::h363f23c5dd6de0d5>
+ - func[1032] sig=3 <core::str::converts::from_utf8_unchecked_mut::hed16cffb125067e7>
+ - func[1033] sig=6 <core::char::methods::encode_utf8_raw::hd558de4125c63a5d>
+ - func[1034] sig=1 <core::char::methods::len_utf8::hc9c1d43b6fee0293>
+ - func[1035] sig=6 <core::char::methods::_$LT$impl$u20$char$GT$::encode_utf8::hd22469c6c787db74>
+ - func[1036] sig=1 <core::char::methods::_$LT$impl$u20$char$GT$::len_utf8::h804aeaf10bd3df82>
+ - func[1037] sig=1 <core::clone::impls::_$LT$impl$u20$core..clone..Clone$u20$for$u20$u8$GT$::clone::h2ecd1b077be3a614>
+ - func[1038] sig=4 <heapless::vec::_$LT$impl$u20$heapless..i..Vec$LT$generic_array..GenericArray$LT$T$C$N$GT$$GT$$GT$::as_mut_slice::h19a8a02e4c335c4c>
+ - func[1039] sig=4 <heapless::vec::_$LT$impl$u20$heapless..i..Vec$LT$generic_array..GenericArray$LT$T$C$N$GT$$GT$$GT$::push_unchecked::h788fdfd3afd768f9>
+ - func[1040] sig=2 <heapless::vec::_$LT$impl$u20$heapless..i..Vec$LT$generic_array..GenericArray$LT$T$C$N$GT$$GT$$GT$::extend_from_slice::h7643a807835a8404>
+ - func[1041] sig=1 <heapless::vec::_$LT$impl$u20$heapless..i..Vec$LT$generic_array..GenericArray$LT$T$C$N$GT$$GT$$GT$::capacity::h5f814c6eab096289>
+ - func[1042] sig=3 <heapless::vec::_$LT$impl$u20$heapless..i..Vec$LT$generic_array..GenericArray$LT$T$C$N$GT$$GT$$GT$::push::h2ab5ad853b334b99>
+ - func[1043] sig=5 <heapless::vec::_$LT$impl$u20$heapless..i..Vec$LT$generic_array..GenericArray$LT$T$C$N$GT$$GT$$GT$::clear::h1d3cd94fd96747a7>
+ - func[1044] sig=4 <heapless::vec::_$LT$impl$u20$heapless..i..Vec$LT$generic_array..GenericArray$LT$T$C$N$GT$$GT$$GT$::truncate::hcb00d98641c7ac99>
+ - func[1045] sig=5 <core::ptr::drop_in_place::h03e88a18748fb120>
+ - func[1046] sig=5 <core::ptr::drop_in_place::h085fca84ab3b63cf>
+ - func[1047] sig=5 <core::ptr::drop_in_place::h4809c066932d9d6c>
+ - func[1048] sig=0 <core::fmt::Write::write_fmt::h309344fc37d31bea>
+ - func[1049] sig=0 <_$LT$$RF$mut$u20$W$u20$as$u20$core..fmt..Write$GT$::write_char::h7b1d238d5fe1bbc6>
+ - func[1050] sig=0 <_$LT$heapless..string..String$LT$N$GT$$u20$as$u20$core..fmt..Write$GT$::write_char::h600e08f1a5767371>
+ - func[1051] sig=0 <_$LT$$RF$mut$u20$W$u20$as$u20$core..fmt..Write$GT$::write_fmt::h6c9b98929d300323>
+ - func[1052] sig=2 <_$LT$$RF$mut$u20$W$u20$as$u20$core..fmt..Write$GT$::write_str::hf755c52d584e69d8>
+ - func[1053] sig=2 <_$LT$heapless..string..String$LT$N$GT$$u20$as$u20$core..fmt..Write$GT$::write_str::h8ef34560657319d6>
+ - func[1054] sig=0 <heapless::string::String$LT$N$GT$::push::h05f1f7fa6a289f3f>
+ - func[1055] sig=7 <_$LT$heapless..string..String$LT$N$GT$$u20$as$u20$core..fmt..Write$GT$::write_char::_$u7b$$u7b$closure$u7d$$u7d$::heada4ece5a932e8d>
+ - func[1056] sig=2 <heapless::string::String$LT$N$GT$::push_str::h9afb39b007f90c8f>
+ - func[1057] sig=7 <_$LT$heapless..string..String$LT$N$GT$$u20$as$u20$core..fmt..Write$GT$::write_str::_$u7b$$u7b$closure$u7d$$u7d$::h9378a1c9b622f0fb>
+ - func[1058] sig=0 <_$LT$heapless..string..String$LT$N$GT$$u20$as$u20$core..fmt..Display$GT$::fmt::h6fcab02228317170>
+ - func[1059] sig=3 <_$LT$heapless..string..String$LT$N$GT$$u20$as$u20$core..convert..From$LT$$RF$str$GT$$GT$::from::ha76738f1f4d34b0d>
+ - func[1060] sig=5 <heapless::string::String$LT$N$GT$::new::h4366942845a5202b>
+ - func[1061] sig=5 <heapless::string::String$LT$N$GT$::push::_$u7b$$u7b$closure$u7d$$u7d$::hb42d2bdc992fdcf2>
+ - func[1062] sig=5 <heapless::string::String$LT$N$GT$::clear::hf2849f5da48db9c5>
+ - func[1063] sig=6 <core::result::Result$LT$T$C$E$GT$::expect::h7c3fb3b4007b4930>
+ - func[1064] sig=4 <core::result::Result$LT$T$C$E$GT$::unwrap::h4ae44bea7668deeb>
+ - func[1065] sig=1 <core::result::Result$LT$T$C$E$GT$::map_err::h06ab84454828df4c>
+ - func[1066] sig=0 <core::result::Result$LT$T$C$E$GT$::map_err::hca994f1de7eaacf8>
+ - func[1067] sig=1 <core::result::Result$LT$T$C$E$GT$::map_err::hdb6140a7d0e8b766>
+ - func[1068] sig=4 <_$LT$core..result..Result$LT$T$C$E$GT$$u20$as$u20$core..ops..try..Try$GT$::from_error::h9d23a114feaf7e8b>
+ - func[1069] sig=13 <_$LT$core..result..Result$LT$T$C$E$GT$$u20$as$u20$core..ops..try..Try$GT$::into_result::hb9be684d1ea7c2a1>
+ - func[1070] sig=0 <_$LT$watchface..BluetoothState$u20$as$u20$core..cmp..PartialEq$GT$::eq::hc391bb4d5ba8e309>
+ - func[1071] sig=5 <_$LT$barebones_watchface..BarebonesWatchFace$u20$as$u20$watchface..WatchFace$GT$::new::he4d79f815528d148>
+ - func[1072] sig=0 <_$LT$barebones_watchface..BarebonesWatchFace$u20$as$u20$watchface..WatchFace$GT$::update::h1c0682462b3f47b1>
+ - func[1073] sig=0 <barebones_watchface::BarebonesWatchFace::update_date_time::h5031896e4dff796d>
+ - func[1074] sig=0 <barebones_watchface::BarebonesWatchFace::update_bluetooth::h3a133bc8548b5499>
+ - func[1075] sig=0 <barebones_watchface::BarebonesWatchFace::update_power::h5e7c4d24293cfb60>
+ - func[1076] sig=4 <barebones_watchface::get_day_name::h3e5cbaa48898c17e>
+ - func[1077] sig=4 <barebones_watchface::get_month_name::h04fd9b9268b43b12>
+ - func[1078] sig=1 <barebones_watchface::convert_battery_voltage::hf5129c9c5c596955>
+ - func[1079] sig=5 <core::ptr::drop_in_place::h2675206e0fff124b>
+ - func[1080] sig=11 <core::result::Result$LT$T$C$E$GT$::expect::he8e7716b18fab98f>
  - func[1081] sig=8 <create_clock>
  - func[1082] sig=8 <refresh_clock>
  - func[1083] sig=18 <update_clock>
@@ -1330,19 +1330,19 @@ Elem[1]:
   - elem[142] = func[964] <_$LT$$RF$T$u20$as$u20$core..fmt..Debug$GT$::fmt::h4952aff41deeda97>
   - elem[143] = func[1010] <core::ptr::drop_in_place::h4797cd4a9a7bfad8>
   - elem[144] = func[931] <core::fmt::num::_$LT$impl$u20$core..fmt..UpperHex$u20$for$u20$i32$GT$::fmt::hd3bfcc7a73894db2>
-  - elem[145] = func[1046] <core::ptr::drop_in_place::h99d1d42b1abc4d67>
-  - elem[146] = func[1052] <_$LT$$RF$mut$u20$W$u20$as$u20$core..fmt..Write$GT$::write_str::h166d4169fc2ffd4d>
-  - elem[147] = func[1049] <_$LT$$RF$mut$u20$W$u20$as$u20$core..fmt..Write$GT$::write_char::h28b2e3bab7de8319>
-  - elem[148] = func[1051] <_$LT$$RF$mut$u20$W$u20$as$u20$core..fmt..Write$GT$::write_fmt::h5d224eb5cc4c9559>
-  - elem[149] = func[1047] <core::ptr::drop_in_place::hefe9b8a2ae8a09d9>
+  - elem[145] = func[1046] <core::ptr::drop_in_place::h085fca84ab3b63cf>
+  - elem[146] = func[1052] <_$LT$$RF$mut$u20$W$u20$as$u20$core..fmt..Write$GT$::write_str::hf755c52d584e69d8>
+  - elem[147] = func[1049] <_$LT$$RF$mut$u20$W$u20$as$u20$core..fmt..Write$GT$::write_char::h7b1d238d5fe1bbc6>
+  - elem[148] = func[1051] <_$LT$$RF$mut$u20$W$u20$as$u20$core..fmt..Write$GT$::write_fmt::h6c9b98929d300323>
+  - elem[149] = func[1045] <core::ptr::drop_in_place::h03e88a18748fb120>
   - elem[150] = func[934] <_$LT$core..fmt..Error$u20$as$u20$core..fmt..Debug$GT$::fmt::hded7663ea187ee94>
-  - elem[151] = func[1045] <core::ptr::drop_in_place::h52d8c1f9fe9926f8>
-  - elem[152] = func[1023] <_$LT$$LP$$RP$$u20$as$u20$core..fmt..Debug$GT$::fmt::h8e451130cb8eb9a9>
+  - elem[151] = func[1047] <core::ptr::drop_in_place::h4809c066932d9d6c>
+  - elem[152] = func[1023] <_$LT$$LP$$RP$$u20$as$u20$core..fmt..Debug$GT$::fmt::h5cb01ae543f37e5d>
   - elem[153] = func[923] <core::fmt::num::imp::_$LT$impl$u20$core..fmt..Display$u20$for$u20$u8$GT$::fmt::h0f99982ddf070089>
-  - elem[154] = func[1058] <_$LT$heapless..string..String$LT$N$GT$$u20$as$u20$core..fmt..Display$GT$::fmt::h7e9d00f8e23c61ac>
+  - elem[154] = func[1058] <_$LT$heapless..string..String$LT$N$GT$$u20$as$u20$core..fmt..Display$GT$::fmt::h6fcab02228317170>
   - elem[155] = func[932] <core::fmt::num::imp::_$LT$impl$u20$core..fmt..Display$u20$for$u20$u16$GT$::fmt::hf0ce3f9aac669764>
-  - elem[156] = func[1022] <_$LT$$RF$T$u20$as$u20$core..fmt..Display$GT$::fmt::h54eb6f59809fb5e8>
-  - elem[157] = func[1079] <core::ptr::drop_in_place::h1398cb182c579158>
+  - elem[156] = func[1022] <_$LT$$RF$T$u20$as$u20$core..fmt..Display$GT$::fmt::hd20b06b5472adfdc>
+  - elem[157] = func[1079] <core::ptr::drop_in_place::h2675206e0fff124b>
 Code[1074]:
  - func[32] size=5 <__wasm_call_ctors>
  - func[33] size=15 <_lv_indev_init>
@@ -2334,65 +2334,65 @@ Code[1074]:
  - func[1019] size=311 <watchface::get_active_screen::h8c593837a19c02ad>
  - func[1020] size=134 <watchface::to_strn::h8dceaa41d92e1587>
  - func[1021] size=116 <core::fmt::ArgumentV1::new::hf905266dd3da2707>
- - func[1022] size=109 <_$LT$$RF$T$u20$as$u20$core..fmt..Display$GT$::fmt::h54eb6f59809fb5e8>
- - func[1023] size=111 <_$LT$$LP$$RP$$u20$as$u20$core..fmt..Debug$GT$::fmt::h8e451130cb8eb9a9>
- - func[1024] size=116 <core::fmt::ArgumentV1::new::h1de6dd324cdc724f>
- - func[1025] size=116 <core::fmt::ArgumentV1::new::h3bc4195336b05dff>
- - func[1026] size=116 <core::fmt::ArgumentV1::new::h5a3d08334b6053e8>
- - func[1027] size=116 <core::fmt::ArgumentV1::new::h8609c8668a600b50>
- - func[1028] size=116 <core::fmt::ArgumentV1::new::hab537aa7e31627a5>
- - func[1029] size=116 <core::fmt::ArgumentV1::new::hbb2376779e25f677>
- - func[1030] size=140 <core::fmt::Arguments::new_v1_formatted::h59593add6007b173>
- - func[1031] size=125 <core::fmt::Arguments::new_v1::hc19daa359cec02d6>
- - func[1032] size=52 <core::str::converts::from_utf8_unchecked_mut::h83adb346ae999853>
- - func[1033] size=1911 <core::char::methods::encode_utf8_raw::h984ba4237035a900>
- - func[1034] size=270 <core::char::methods::len_utf8::h3a266cae26999e2c>
- - func[1035] size=153 <core::char::methods::_$LT$impl$u20$char$GT$::encode_utf8::h675f58b58608ea70>
- - func[1036] size=65 <core::char::methods::_$LT$impl$u20$char$GT$::len_utf8::h6e580b4e8e221e72>
- - func[1037] size=42 <core::clone::impls::_$LT$impl$u20$core..clone..Clone$u20$for$u20$u8$GT$::clone::h4223da7a12831e97>
- - func[1038] size=126 <heapless::vec::_$LT$impl$u20$heapless..i..Vec$LT$generic_array..GenericArray$LT$T$C$N$GT$$GT$$GT$::as_mut_slice::hd698af908e64fe9c>
- - func[1039] size=216 <heapless::vec::_$LT$impl$u20$heapless..i..Vec$LT$generic_array..GenericArray$LT$T$C$N$GT$$GT$$GT$::push_unchecked::h9b46045a42fef503>
- - func[1040] size=472 <heapless::vec::_$LT$impl$u20$heapless..i..Vec$LT$generic_array..GenericArray$LT$T$C$N$GT$$GT$$GT$::extend_from_slice::h9fd5680b570210ee>
- - func[1041] size=63 <heapless::vec::_$LT$impl$u20$heapless..i..Vec$LT$generic_array..GenericArray$LT$T$C$N$GT$$GT$$GT$::capacity::h765ffbbecfad0f39>
- - func[1042] size=199 <heapless::vec::_$LT$impl$u20$heapless..i..Vec$LT$generic_array..GenericArray$LT$T$C$N$GT$$GT$$GT$::push::ha62b161d7c0938dd>
- - func[1043] size=67 <heapless::vec::_$LT$impl$u20$heapless..i..Vec$LT$generic_array..GenericArray$LT$T$C$N$GT$$GT$$GT$::clear::hadc6909a82158d6d>
- - func[1044] size=290 <heapless::vec::_$LT$impl$u20$heapless..i..Vec$LT$generic_array..GenericArray$LT$T$C$N$GT$$GT$$GT$::truncate::h4624c50b09409c4e>
- - func[1045] size=31 <core::ptr::drop_in_place::h52d8c1f9fe9926f8>
- - func[1046] size=31 <core::ptr::drop_in_place::h99d1d42b1abc4d67>
- - func[1047] size=31 <core::ptr::drop_in_place::hefe9b8a2ae8a09d9>
- - func[1048] size=236 <core::fmt::Write::write_fmt::he7382ebcf3613eba>
- - func[1049] size=98 <_$LT$$RF$mut$u20$W$u20$as$u20$core..fmt..Write$GT$::write_char::h28b2e3bab7de8319>
- - func[1050] size=113 <_$LT$heapless..string..String$LT$N$GT$$u20$as$u20$core..fmt..Write$GT$::write_char::h640130ca252f855d>
- - func[1051] size=193 <_$LT$$RF$mut$u20$W$u20$as$u20$core..fmt..Write$GT$::write_fmt::h5d224eb5cc4c9559>
- - func[1052] size=107 <_$LT$$RF$mut$u20$W$u20$as$u20$core..fmt..Write$GT$::write_str::h166d4169fc2ffd4d>
- - func[1053] size=122 <_$LT$heapless..string..String$LT$N$GT$$u20$as$u20$core..fmt..Write$GT$::write_str::hef3f88b1f565fec3>
- - func[1054] size=412 <heapless::string::String$LT$N$GT$::push::h54a0db2f26d541be>
- - func[1055] size=21 <_$LT$heapless..string..String$LT$N$GT$$u20$as$u20$core..fmt..Write$GT$::write_char::_$u7b$$u7b$closure$u7d$$u7d$::h02e7df80aa14789a>
- - func[1056] size=150 <heapless::string::String$LT$N$GT$::push_str::hb314363501940665>
- - func[1057] size=21 <_$LT$heapless..string..String$LT$N$GT$$u20$as$u20$core..fmt..Write$GT$::write_str::_$u7b$$u7b$closure$u7d$$u7d$::hae11c3169dea0162>
- - func[1058] size=116 <_$LT$heapless..string..String$LT$N$GT$$u20$as$u20$core..fmt..Display$GT$::fmt::h7e9d00f8e23c61ac>
- - func[1059] size=115 <_$LT$heapless..string..String$LT$N$GT$$u20$as$u20$core..convert..From$LT$$RF$str$GT$$GT$::from::he47c67df16828418>
- - func[1060] size=113 <heapless::string::String$LT$N$GT$::new::hc7ad6e50194cd1b5>
- - func[1061] size=31 <heapless::string::String$LT$N$GT$::push::_$u7b$$u7b$closure$u7d$$u7d$::h07e1256fcacdfefa>
- - func[1062] size=59 <heapless::string::String$LT$N$GT$::clear::h3354da5f6c9455db>
- - func[1063] size=154 <core::result::Result$LT$T$C$E$GT$::expect::hd542b21e13bcab49>
- - func[1064] size=160 <core::result::Result$LT$T$C$E$GT$::unwrap::h11e5ad4aedd4704e>
- - func[1065] size=221 <core::result::Result$LT$T$C$E$GT$::map_err::h7fb3c4b4716a0d90>
- - func[1066] size=221 <core::result::Result$LT$T$C$E$GT$::map_err::h9792fba49013518d>
- - func[1067] size=262 <core::result::Result$LT$T$C$E$GT$::map_err::hbf01bb3ab98c63c5>
- - func[1068] size=51 <_$LT$core..result..Result$LT$T$C$E$GT$$u20$as$u20$core..ops..try..Try$GT$::from_error::hc96c8fd54707bb98>
- - func[1069] size=72 <_$LT$core..result..Result$LT$T$C$E$GT$$u20$as$u20$core..ops..try..Try$GT$::into_result::h2516534a55c5ddc1>
- - func[1070] size=222 <_$LT$watchface..BluetoothState$u20$as$u20$core..cmp..PartialEq$GT$::eq::h8c4245a555e5175a>
- - func[1071] size=4908 <_$LT$barebones_watchface..BarebonesWatchFace$u20$as$u20$watchface..WatchFace$GT$::new::hd357ba16458d141c>
- - func[1072] size=421 <_$LT$barebones_watchface..BarebonesWatchFace$u20$as$u20$watchface..WatchFace$GT$::update::h92ba78df24e48147>
- - func[1073] size=1629 <barebones_watchface::BarebonesWatchFace::update_date_time::h16b874fef0edaea5>
- - func[1074] size=1000 <barebones_watchface::BarebonesWatchFace::update_bluetooth::h94f03cda28065740>
- - func[1075] size=1569 <barebones_watchface::BarebonesWatchFace::update_power::h101e943cabb0da09>
- - func[1076] size=360 <barebones_watchface::get_day_name::h3394ce739ae40ec1>
- - func[1077] size=566 <barebones_watchface::get_month_name::h29db0d71ec432e8f>
- - func[1078] size=39 <barebones_watchface::convert_battery_voltage::h71a372e111476ea7>
- - func[1079] size=31 <core::ptr::drop_in_place::h1398cb182c579158>
- - func[1080] size=219 <core::result::Result$LT$T$C$E$GT$::expect::h5d757c5efe0b1ade>
+ - func[1022] size=109 <_$LT$$RF$T$u20$as$u20$core..fmt..Display$GT$::fmt::hd20b06b5472adfdc>
+ - func[1023] size=111 <_$LT$$LP$$RP$$u20$as$u20$core..fmt..Debug$GT$::fmt::h5cb01ae543f37e5d>
+ - func[1024] size=116 <core::fmt::ArgumentV1::new::h6c3e4cc3e2dd3cf4>
+ - func[1025] size=116 <core::fmt::ArgumentV1::new::h91b8145fd2c84e9e>
+ - func[1026] size=116 <core::fmt::ArgumentV1::new::hbd9d0bc886bc2a35>
+ - func[1027] size=116 <core::fmt::ArgumentV1::new::hcb9b1bbd814fba34>
+ - func[1028] size=116 <core::fmt::ArgumentV1::new::he775112b3ba9d80c>
+ - func[1029] size=116 <core::fmt::ArgumentV1::new::he775710d269171a3>
+ - func[1030] size=140 <core::fmt::Arguments::new_v1_formatted::h93914646bd0c4143>
+ - func[1031] size=125 <core::fmt::Arguments::new_v1::h363f23c5dd6de0d5>
+ - func[1032] size=52 <core::str::converts::from_utf8_unchecked_mut::hed16cffb125067e7>
+ - func[1033] size=1911 <core::char::methods::encode_utf8_raw::hd558de4125c63a5d>
+ - func[1034] size=270 <core::char::methods::len_utf8::hc9c1d43b6fee0293>
+ - func[1035] size=153 <core::char::methods::_$LT$impl$u20$char$GT$::encode_utf8::hd22469c6c787db74>
+ - func[1036] size=65 <core::char::methods::_$LT$impl$u20$char$GT$::len_utf8::h804aeaf10bd3df82>
+ - func[1037] size=42 <core::clone::impls::_$LT$impl$u20$core..clone..Clone$u20$for$u20$u8$GT$::clone::h2ecd1b077be3a614>
+ - func[1038] size=126 <heapless::vec::_$LT$impl$u20$heapless..i..Vec$LT$generic_array..GenericArray$LT$T$C$N$GT$$GT$$GT$::as_mut_slice::h19a8a02e4c335c4c>
+ - func[1039] size=216 <heapless::vec::_$LT$impl$u20$heapless..i..Vec$LT$generic_array..GenericArray$LT$T$C$N$GT$$GT$$GT$::push_unchecked::h788fdfd3afd768f9>
+ - func[1040] size=472 <heapless::vec::_$LT$impl$u20$heapless..i..Vec$LT$generic_array..GenericArray$LT$T$C$N$GT$$GT$$GT$::extend_from_slice::h7643a807835a8404>
+ - func[1041] size=63 <heapless::vec::_$LT$impl$u20$heapless..i..Vec$LT$generic_array..GenericArray$LT$T$C$N$GT$$GT$$GT$::capacity::h5f814c6eab096289>
+ - func[1042] size=199 <heapless::vec::_$LT$impl$u20$heapless..i..Vec$LT$generic_array..GenericArray$LT$T$C$N$GT$$GT$$GT$::push::h2ab5ad853b334b99>
+ - func[1043] size=67 <heapless::vec::_$LT$impl$u20$heapless..i..Vec$LT$generic_array..GenericArray$LT$T$C$N$GT$$GT$$GT$::clear::h1d3cd94fd96747a7>
+ - func[1044] size=290 <heapless::vec::_$LT$impl$u20$heapless..i..Vec$LT$generic_array..GenericArray$LT$T$C$N$GT$$GT$$GT$::truncate::hcb00d98641c7ac99>
+ - func[1045] size=31 <core::ptr::drop_in_place::h03e88a18748fb120>
+ - func[1046] size=31 <core::ptr::drop_in_place::h085fca84ab3b63cf>
+ - func[1047] size=31 <core::ptr::drop_in_place::h4809c066932d9d6c>
+ - func[1048] size=236 <core::fmt::Write::write_fmt::h309344fc37d31bea>
+ - func[1049] size=98 <_$LT$$RF$mut$u20$W$u20$as$u20$core..fmt..Write$GT$::write_char::h7b1d238d5fe1bbc6>
+ - func[1050] size=113 <_$LT$heapless..string..String$LT$N$GT$$u20$as$u20$core..fmt..Write$GT$::write_char::h600e08f1a5767371>
+ - func[1051] size=193 <_$LT$$RF$mut$u20$W$u20$as$u20$core..fmt..Write$GT$::write_fmt::h6c9b98929d300323>
+ - func[1052] size=107 <_$LT$$RF$mut$u20$W$u20$as$u20$core..fmt..Write$GT$::write_str::hf755c52d584e69d8>
+ - func[1053] size=122 <_$LT$heapless..string..String$LT$N$GT$$u20$as$u20$core..fmt..Write$GT$::write_str::h8ef34560657319d6>
+ - func[1054] size=412 <heapless::string::String$LT$N$GT$::push::h05f1f7fa6a289f3f>
+ - func[1055] size=21 <_$LT$heapless..string..String$LT$N$GT$$u20$as$u20$core..fmt..Write$GT$::write_char::_$u7b$$u7b$closure$u7d$$u7d$::heada4ece5a932e8d>
+ - func[1056] size=150 <heapless::string::String$LT$N$GT$::push_str::h9afb39b007f90c8f>
+ - func[1057] size=21 <_$LT$heapless..string..String$LT$N$GT$$u20$as$u20$core..fmt..Write$GT$::write_str::_$u7b$$u7b$closure$u7d$$u7d$::h9378a1c9b622f0fb>
+ - func[1058] size=116 <_$LT$heapless..string..String$LT$N$GT$$u20$as$u20$core..fmt..Display$GT$::fmt::h6fcab02228317170>
+ - func[1059] size=115 <_$LT$heapless..string..String$LT$N$GT$$u20$as$u20$core..convert..From$LT$$RF$str$GT$$GT$::from::ha76738f1f4d34b0d>
+ - func[1060] size=113 <heapless::string::String$LT$N$GT$::new::h4366942845a5202b>
+ - func[1061] size=31 <heapless::string::String$LT$N$GT$::push::_$u7b$$u7b$closure$u7d$$u7d$::hb42d2bdc992fdcf2>
+ - func[1062] size=59 <heapless::string::String$LT$N$GT$::clear::hf2849f5da48db9c5>
+ - func[1063] size=154 <core::result::Result$LT$T$C$E$GT$::expect::h7c3fb3b4007b4930>
+ - func[1064] size=160 <core::result::Result$LT$T$C$E$GT$::unwrap::h4ae44bea7668deeb>
+ - func[1065] size=221 <core::result::Result$LT$T$C$E$GT$::map_err::h06ab84454828df4c>
+ - func[1066] size=262 <core::result::Result$LT$T$C$E$GT$::map_err::hca994f1de7eaacf8>
+ - func[1067] size=221 <core::result::Result$LT$T$C$E$GT$::map_err::hdb6140a7d0e8b766>
+ - func[1068] size=51 <_$LT$core..result..Result$LT$T$C$E$GT$$u20$as$u20$core..ops..try..Try$GT$::from_error::h9d23a114feaf7e8b>
+ - func[1069] size=72 <_$LT$core..result..Result$LT$T$C$E$GT$$u20$as$u20$core..ops..try..Try$GT$::into_result::hb9be684d1ea7c2a1>
+ - func[1070] size=222 <_$LT$watchface..BluetoothState$u20$as$u20$core..cmp..PartialEq$GT$::eq::hc391bb4d5ba8e309>
+ - func[1071] size=4908 <_$LT$barebones_watchface..BarebonesWatchFace$u20$as$u20$watchface..WatchFace$GT$::new::he4d79f815528d148>
+ - func[1072] size=421 <_$LT$barebones_watchface..BarebonesWatchFace$u20$as$u20$watchface..WatchFace$GT$::update::h1c0682462b3f47b1>
+ - func[1073] size=1629 <barebones_watchface::BarebonesWatchFace::update_date_time::h5031896e4dff796d>
+ - func[1074] size=1000 <barebones_watchface::BarebonesWatchFace::update_bluetooth::h3a133bc8548b5499>
+ - func[1075] size=1569 <barebones_watchface::BarebonesWatchFace::update_power::h5e7c4d24293cfb60>
+ - func[1076] size=360 <barebones_watchface::get_day_name::h3e5cbaa48898c17e>
+ - func[1077] size=566 <barebones_watchface::get_month_name::h04fd9b9268b43b12>
+ - func[1078] size=39 <barebones_watchface::convert_battery_voltage::hf5129c9c5c596955>
+ - func[1079] size=31 <core::ptr::drop_in_place::h2675206e0fff124b>
+ - func[1080] size=219 <core::result::Result$LT$T$C$E$GT$::expect::he8e7716b18fab98f>
  - func[1081] size=285 <create_clock>
  - func[1082] size=48 <refresh_clock>
  - func[1083] size=360 <update_clock>
@@ -8075,7 +8075,7 @@ Data[3]:
   - 0016540: 7468 7562 2e63 6f6d 2d31 6563 6336 3239  thub.com-1ecc629
   - 0016550: 3964 6239 6563 3832 332f 6261 7265 626f  9db9ec823/barebo
   - 0016560: 6e65 732d 7761 7463 6866 6163 652d 312e  nes-watchface-1.
-  - 0016570: 302e 322f 7372 632f 6c69 622e 7273 0000  0.2/src/lib.rs..
+  - 0016570: 302e 332f 7372 632f 6c69 622e 7273 0000  0.3/src/lib.rs..
   - 0016580: 1d65 0100 6100 0000 a700 0000 0f00 0000  .e..a...........
   - 0016590: 200a 0000 bb64 0100 0000 0000 9065 0100   ....d.......e..
   - 00165a0: 0100 0000 9065 0100 0100 0000 9065 0100  .....e.......e..
@@ -38672,65 +38672,65 @@ Custom:
  - func[1019] <watchface::get_active_screen::h8c593837a19c02ad>
  - func[1020] <watchface::to_strn::h8dceaa41d92e1587>
  - func[1021] <core::fmt::ArgumentV1::new::hf905266dd3da2707>
- - func[1022] <_$LT$$RF$T$u20$as$u20$core..fmt..Display$GT$::fmt::h54eb6f59809fb5e8>
- - func[1023] <_$LT$$LP$$RP$$u20$as$u20$core..fmt..Debug$GT$::fmt::h8e451130cb8eb9a9>
- - func[1024] <core::fmt::ArgumentV1::new::h1de6dd324cdc724f>
- - func[1025] <core::fmt::ArgumentV1::new::h3bc4195336b05dff>
- - func[1026] <core::fmt::ArgumentV1::new::h5a3d08334b6053e8>
- - func[1027] <core::fmt::ArgumentV1::new::h8609c8668a600b50>
- - func[1028] <core::fmt::ArgumentV1::new::hab537aa7e31627a5>
- - func[1029] <core::fmt::ArgumentV1::new::hbb2376779e25f677>
- - func[1030] <core::fmt::Arguments::new_v1_formatted::h59593add6007b173>
- - func[1031] <core::fmt::Arguments::new_v1::hc19daa359cec02d6>
- - func[1032] <core::str::converts::from_utf8_unchecked_mut::h83adb346ae999853>
- - func[1033] <core::char::methods::encode_utf8_raw::h984ba4237035a900>
- - func[1034] <core::char::methods::len_utf8::h3a266cae26999e2c>
- - func[1035] <core::char::methods::_$LT$impl$u20$char$GT$::encode_utf8::h675f58b58608ea70>
- - func[1036] <core::char::methods::_$LT$impl$u20$char$GT$::len_utf8::h6e580b4e8e221e72>
- - func[1037] <core::clone::impls::_$LT$impl$u20$core..clone..Clone$u20$for$u20$u8$GT$::clone::h4223da7a12831e97>
- - func[1038] <heapless::vec::_$LT$impl$u20$heapless..i..Vec$LT$generic_array..GenericArray$LT$T$C$N$GT$$GT$$GT$::as_mut_slice::hd698af908e64fe9c>
- - func[1039] <heapless::vec::_$LT$impl$u20$heapless..i..Vec$LT$generic_array..GenericArray$LT$T$C$N$GT$$GT$$GT$::push_unchecked::h9b46045a42fef503>
- - func[1040] <heapless::vec::_$LT$impl$u20$heapless..i..Vec$LT$generic_array..GenericArray$LT$T$C$N$GT$$GT$$GT$::extend_from_slice::h9fd5680b570210ee>
- - func[1041] <heapless::vec::_$LT$impl$u20$heapless..i..Vec$LT$generic_array..GenericArray$LT$T$C$N$GT$$GT$$GT$::capacity::h765ffbbecfad0f39>
- - func[1042] <heapless::vec::_$LT$impl$u20$heapless..i..Vec$LT$generic_array..GenericArray$LT$T$C$N$GT$$GT$$GT$::push::ha62b161d7c0938dd>
- - func[1043] <heapless::vec::_$LT$impl$u20$heapless..i..Vec$LT$generic_array..GenericArray$LT$T$C$N$GT$$GT$$GT$::clear::hadc6909a82158d6d>
- - func[1044] <heapless::vec::_$LT$impl$u20$heapless..i..Vec$LT$generic_array..GenericArray$LT$T$C$N$GT$$GT$$GT$::truncate::h4624c50b09409c4e>
- - func[1045] <core::ptr::drop_in_place::h52d8c1f9fe9926f8>
- - func[1046] <core::ptr::drop_in_place::h99d1d42b1abc4d67>
- - func[1047] <core::ptr::drop_in_place::hefe9b8a2ae8a09d9>
- - func[1048] <core::fmt::Write::write_fmt::he7382ebcf3613eba>
- - func[1049] <_$LT$$RF$mut$u20$W$u20$as$u20$core..fmt..Write$GT$::write_char::h28b2e3bab7de8319>
- - func[1050] <_$LT$heapless..string..String$LT$N$GT$$u20$as$u20$core..fmt..Write$GT$::write_char::h640130ca252f855d>
- - func[1051] <_$LT$$RF$mut$u20$W$u20$as$u20$core..fmt..Write$GT$::write_fmt::h5d224eb5cc4c9559>
- - func[1052] <_$LT$$RF$mut$u20$W$u20$as$u20$core..fmt..Write$GT$::write_str::h166d4169fc2ffd4d>
- - func[1053] <_$LT$heapless..string..String$LT$N$GT$$u20$as$u20$core..fmt..Write$GT$::write_str::hef3f88b1f565fec3>
- - func[1054] <heapless::string::String$LT$N$GT$::push::h54a0db2f26d541be>
- - func[1055] <_$LT$heapless..string..String$LT$N$GT$$u20$as$u20$core..fmt..Write$GT$::write_char::_$u7b$$u7b$closure$u7d$$u7d$::h02e7df80aa14789a>
- - func[1056] <heapless::string::String$LT$N$GT$::push_str::hb314363501940665>
- - func[1057] <_$LT$heapless..string..String$LT$N$GT$$u20$as$u20$core..fmt..Write$GT$::write_str::_$u7b$$u7b$closure$u7d$$u7d$::hae11c3169dea0162>
- - func[1058] <_$LT$heapless..string..String$LT$N$GT$$u20$as$u20$core..fmt..Display$GT$::fmt::h7e9d00f8e23c61ac>
- - func[1059] <_$LT$heapless..string..String$LT$N$GT$$u20$as$u20$core..convert..From$LT$$RF$str$GT$$GT$::from::he47c67df16828418>
- - func[1060] <heapless::string::String$LT$N$GT$::new::hc7ad6e50194cd1b5>
- - func[1061] <heapless::string::String$LT$N$GT$::push::_$u7b$$u7b$closure$u7d$$u7d$::h07e1256fcacdfefa>
- - func[1062] <heapless::string::String$LT$N$GT$::clear::h3354da5f6c9455db>
- - func[1063] <core::result::Result$LT$T$C$E$GT$::expect::hd542b21e13bcab49>
- - func[1064] <core::result::Result$LT$T$C$E$GT$::unwrap::h11e5ad4aedd4704e>
- - func[1065] <core::result::Result$LT$T$C$E$GT$::map_err::h7fb3c4b4716a0d90>
- - func[1066] <core::result::Result$LT$T$C$E$GT$::map_err::h9792fba49013518d>
- - func[1067] <core::result::Result$LT$T$C$E$GT$::map_err::hbf01bb3ab98c63c5>
- - func[1068] <_$LT$core..result..Result$LT$T$C$E$GT$$u20$as$u20$core..ops..try..Try$GT$::from_error::hc96c8fd54707bb98>
- - func[1069] <_$LT$core..result..Result$LT$T$C$E$GT$$u20$as$u20$core..ops..try..Try$GT$::into_result::h2516534a55c5ddc1>
- - func[1070] <_$LT$watchface..BluetoothState$u20$as$u20$core..cmp..PartialEq$GT$::eq::h8c4245a555e5175a>
- - func[1071] <_$LT$barebones_watchface..BarebonesWatchFace$u20$as$u20$watchface..WatchFace$GT$::new::hd357ba16458d141c>
- - func[1072] <_$LT$barebones_watchface..BarebonesWatchFace$u20$as$u20$watchface..WatchFace$GT$::update::h92ba78df24e48147>
- - func[1073] <barebones_watchface::BarebonesWatchFace::update_date_time::h16b874fef0edaea5>
- - func[1074] <barebones_watchface::BarebonesWatchFace::update_bluetooth::h94f03cda28065740>
- - func[1075] <barebones_watchface::BarebonesWatchFace::update_power::h101e943cabb0da09>
- - func[1076] <barebones_watchface::get_day_name::h3394ce739ae40ec1>
- - func[1077] <barebones_watchface::get_month_name::h29db0d71ec432e8f>
- - func[1078] <barebones_watchface::convert_battery_voltage::h71a372e111476ea7>
- - func[1079] <core::ptr::drop_in_place::h1398cb182c579158>
- - func[1080] <core::result::Result$LT$T$C$E$GT$::expect::h5d757c5efe0b1ade>
+ - func[1022] <_$LT$$RF$T$u20$as$u20$core..fmt..Display$GT$::fmt::hd20b06b5472adfdc>
+ - func[1023] <_$LT$$LP$$RP$$u20$as$u20$core..fmt..Debug$GT$::fmt::h5cb01ae543f37e5d>
+ - func[1024] <core::fmt::ArgumentV1::new::h6c3e4cc3e2dd3cf4>
+ - func[1025] <core::fmt::ArgumentV1::new::h91b8145fd2c84e9e>
+ - func[1026] <core::fmt::ArgumentV1::new::hbd9d0bc886bc2a35>
+ - func[1027] <core::fmt::ArgumentV1::new::hcb9b1bbd814fba34>
+ - func[1028] <core::fmt::ArgumentV1::new::he775112b3ba9d80c>
+ - func[1029] <core::fmt::ArgumentV1::new::he775710d269171a3>
+ - func[1030] <core::fmt::Arguments::new_v1_formatted::h93914646bd0c4143>
+ - func[1031] <core::fmt::Arguments::new_v1::h363f23c5dd6de0d5>
+ - func[1032] <core::str::converts::from_utf8_unchecked_mut::hed16cffb125067e7>
+ - func[1033] <core::char::methods::encode_utf8_raw::hd558de4125c63a5d>
+ - func[1034] <core::char::methods::len_utf8::hc9c1d43b6fee0293>
+ - func[1035] <core::char::methods::_$LT$impl$u20$char$GT$::encode_utf8::hd22469c6c787db74>
+ - func[1036] <core::char::methods::_$LT$impl$u20$char$GT$::len_utf8::h804aeaf10bd3df82>
+ - func[1037] <core::clone::impls::_$LT$impl$u20$core..clone..Clone$u20$for$u20$u8$GT$::clone::h2ecd1b077be3a614>
+ - func[1038] <heapless::vec::_$LT$impl$u20$heapless..i..Vec$LT$generic_array..GenericArray$LT$T$C$N$GT$$GT$$GT$::as_mut_slice::h19a8a02e4c335c4c>
+ - func[1039] <heapless::vec::_$LT$impl$u20$heapless..i..Vec$LT$generic_array..GenericArray$LT$T$C$N$GT$$GT$$GT$::push_unchecked::h788fdfd3afd768f9>
+ - func[1040] <heapless::vec::_$LT$impl$u20$heapless..i..Vec$LT$generic_array..GenericArray$LT$T$C$N$GT$$GT$$GT$::extend_from_slice::h7643a807835a8404>
+ - func[1041] <heapless::vec::_$LT$impl$u20$heapless..i..Vec$LT$generic_array..GenericArray$LT$T$C$N$GT$$GT$$GT$::capacity::h5f814c6eab096289>
+ - func[1042] <heapless::vec::_$LT$impl$u20$heapless..i..Vec$LT$generic_array..GenericArray$LT$T$C$N$GT$$GT$$GT$::push::h2ab5ad853b334b99>
+ - func[1043] <heapless::vec::_$LT$impl$u20$heapless..i..Vec$LT$generic_array..GenericArray$LT$T$C$N$GT$$GT$$GT$::clear::h1d3cd94fd96747a7>
+ - func[1044] <heapless::vec::_$LT$impl$u20$heapless..i..Vec$LT$generic_array..GenericArray$LT$T$C$N$GT$$GT$$GT$::truncate::hcb00d98641c7ac99>
+ - func[1045] <core::ptr::drop_in_place::h03e88a18748fb120>
+ - func[1046] <core::ptr::drop_in_place::h085fca84ab3b63cf>
+ - func[1047] <core::ptr::drop_in_place::h4809c066932d9d6c>
+ - func[1048] <core::fmt::Write::write_fmt::h309344fc37d31bea>
+ - func[1049] <_$LT$$RF$mut$u20$W$u20$as$u20$core..fmt..Write$GT$::write_char::h7b1d238d5fe1bbc6>
+ - func[1050] <_$LT$heapless..string..String$LT$N$GT$$u20$as$u20$core..fmt..Write$GT$::write_char::h600e08f1a5767371>
+ - func[1051] <_$LT$$RF$mut$u20$W$u20$as$u20$core..fmt..Write$GT$::write_fmt::h6c9b98929d300323>
+ - func[1052] <_$LT$$RF$mut$u20$W$u20$as$u20$core..fmt..Write$GT$::write_str::hf755c52d584e69d8>
+ - func[1053] <_$LT$heapless..string..String$LT$N$GT$$u20$as$u20$core..fmt..Write$GT$::write_str::h8ef34560657319d6>
+ - func[1054] <heapless::string::String$LT$N$GT$::push::h05f1f7fa6a289f3f>
+ - func[1055] <_$LT$heapless..string..String$LT$N$GT$$u20$as$u20$core..fmt..Write$GT$::write_char::_$u7b$$u7b$closure$u7d$$u7d$::heada4ece5a932e8d>
+ - func[1056] <heapless::string::String$LT$N$GT$::push_str::h9afb39b007f90c8f>
+ - func[1057] <_$LT$heapless..string..String$LT$N$GT$$u20$as$u20$core..fmt..Write$GT$::write_str::_$u7b$$u7b$closure$u7d$$u7d$::h9378a1c9b622f0fb>
+ - func[1058] <_$LT$heapless..string..String$LT$N$GT$$u20$as$u20$core..fmt..Display$GT$::fmt::h6fcab02228317170>
+ - func[1059] <_$LT$heapless..string..String$LT$N$GT$$u20$as$u20$core..convert..From$LT$$RF$str$GT$$GT$::from::ha76738f1f4d34b0d>
+ - func[1060] <heapless::string::String$LT$N$GT$::new::h4366942845a5202b>
+ - func[1061] <heapless::string::String$LT$N$GT$::push::_$u7b$$u7b$closure$u7d$$u7d$::hb42d2bdc992fdcf2>
+ - func[1062] <heapless::string::String$LT$N$GT$::clear::hf2849f5da48db9c5>
+ - func[1063] <core::result::Result$LT$T$C$E$GT$::expect::h7c3fb3b4007b4930>
+ - func[1064] <core::result::Result$LT$T$C$E$GT$::unwrap::h4ae44bea7668deeb>
+ - func[1065] <core::result::Result$LT$T$C$E$GT$::map_err::h06ab84454828df4c>
+ - func[1066] <core::result::Result$LT$T$C$E$GT$::map_err::hca994f1de7eaacf8>
+ - func[1067] <core::result::Result$LT$T$C$E$GT$::map_err::hdb6140a7d0e8b766>
+ - func[1068] <_$LT$core..result..Result$LT$T$C$E$GT$$u20$as$u20$core..ops..try..Try$GT$::from_error::h9d23a114feaf7e8b>
+ - func[1069] <_$LT$core..result..Result$LT$T$C$E$GT$$u20$as$u20$core..ops..try..Try$GT$::into_result::hb9be684d1ea7c2a1>
+ - func[1070] <_$LT$watchface..BluetoothState$u20$as$u20$core..cmp..PartialEq$GT$::eq::hc391bb4d5ba8e309>
+ - func[1071] <_$LT$barebones_watchface..BarebonesWatchFace$u20$as$u20$watchface..WatchFace$GT$::new::he4d79f815528d148>
+ - func[1072] <_$LT$barebones_watchface..BarebonesWatchFace$u20$as$u20$watchface..WatchFace$GT$::update::h1c0682462b3f47b1>
+ - func[1073] <barebones_watchface::BarebonesWatchFace::update_date_time::h5031896e4dff796d>
+ - func[1074] <barebones_watchface::BarebonesWatchFace::update_bluetooth::h3a133bc8548b5499>
+ - func[1075] <barebones_watchface::BarebonesWatchFace::update_power::h5e7c4d24293cfb60>
+ - func[1076] <barebones_watchface::get_day_name::h3e5cbaa48898c17e>
+ - func[1077] <barebones_watchface::get_month_name::h04fd9b9268b43b12>
+ - func[1078] <barebones_watchface::convert_battery_voltage::hf5129c9c5c596955>
+ - func[1079] <core::ptr::drop_in_place::h2675206e0fff124b>
+ - func[1080] <core::result::Result$LT$T$C$E$GT$::expect::he8e7716b18fab98f>
  - func[1081] <create_clock>
  - func[1082] <refresh_clock>
  - func[1083] <update_clock>
