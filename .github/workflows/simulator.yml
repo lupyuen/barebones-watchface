@@ -167,6 +167,10 @@ jobs:
         crate_path=`expr match "$crate_root" '.*path+file://\([^ ]*\))'`
         echo crate_path=$crate_path
 
+        # Escape the crate path e.g. \/home\/runner\/work\/my-watchface\/my-watchface
+        crate_path_escaped=${crate_path//\//\\/}
+        echo crate_path_escaped=$crate_path_escaped
+
         # Search all files *.rs in crate path src for
         #   impl WatchFace for MyWatchface {
         shopt -s globstar
@@ -182,14 +186,15 @@ jobs:
         # Go to the LVGL folder
         cd /tmp/lvgl-wasm
 
-        # TODO: Change mynewt/wasm/Cargo.toml from
+        # Change mynewt/wasm/Cargo.toml from
         #   barebones-watchface = "1.0.2"
         # to
         #   my-watchface = { path = "/home/runner/work/my-watchface/my-watchface" }
 
-        # cat mynewt/wasm/Cargo.toml \
-        #     | sed 's/crate-type = \["staticlib"\]/crate-type = \["lib"\]/' \
-        #     >mynewt/wasm/Cargo.toml.new
+        cat mynewt/wasm/Cargo.toml \
+            | sed "s/^barebones-watchface.*$/$crate_name = { path = \"$crate_path_escaped\" }/" \
+            >mynewt/wasm/Cargo.toml.new
+        cat mynewt/wasm/Cargo.toml.new
         # cp mynewt/wasm/Cargo.toml.new mynewt/wasm/Cargo.toml
         # rm mynewt/wasm/Cargo.toml.new
         # cat mynewt/wasm/Cargo.toml
