@@ -152,7 +152,7 @@ jobs:
         # Returns: "barebones-watchface 1.0.2 (path+file:///home/runner/work/barebones-watchface/barebones-watchface)"
 
         # Extract watchface crate name e.g. my-watchface
-        crate_name=`expr match "$crate_root" '\([^ ]*\) '`
+        crate_name=`expr match "$crate_root" '\"\([^ ]*\) '`
         echo crate_name=$crate_name
 
         # Extract watchface crate version e.g. 1.0.2
