@@ -167,12 +167,16 @@ jobs:
         crate_path=`expr match "$crate_root" '.*path+file://\([^ ]*\))'`
         echo crate_path=$crate_path
 
-        # Find the watchface struct name e.g. MyWatchface
         # Search all files *.rs in crate path src for
         #   impl WatchFace for MyWatchface {
         shopt -s globstar
         ls $crate_path/src/**/*.rs
-        grep -r "impl WatchFace" $crate_path/src/**/*.rs
+        matches=`grep -r "impl WatchFace" $crate_path/src/**/*.rs`
+        # Returns: impl WatchFace for MyWatchface {
+
+        # Extract the watchface struct name e.g. MyWatchface
+        struct_name=`expr match "$matches" '.*impl[ ]*WatchFace[ ]*for[ ]*\([^ {]*\)'`
+        echo struct_name=$struct_name
 
         # Go to the LVGL folder
         cd /tmp/lvgl-wasm
