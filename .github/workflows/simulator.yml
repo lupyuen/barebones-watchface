@@ -196,6 +196,7 @@ jobs:
             >mynewt/wasm/Cargo.toml.new
         cp mynewt/wasm/Cargo.toml.new mynewt/wasm/Cargo.toml
         rm mynewt/wasm/Cargo.toml.new
+        echo Patched mynewt/wasm/Cargo.toml...
         cat mynewt/wasm/Cargo.toml
 
         # TODO: Change mynewt/wasm/src/lib.rs from
@@ -208,12 +209,14 @@ jobs:
         #   type WatchFaceType = my_watchface::MyWatchFace;
         # Change crate name from "-" to "_"
 
-        # cat mynewt/wasm/src/lib.rs \
-        #     | sed 's/crate-type = \["staticlib"\]/crate-type = \["lib"\]/' \
-        #     >mynewt/wasm/src/lib.rs.new
-        # cp mynewt/wasm/src/lib.rs.new mynewt/wasm/src/lib.rs
-        # rm mynewt/wasm/src/lib.rs.new
-        # cat mynewt/wasm/src/lib.rs
+        cat mynewt/wasm/src/lib.rs \
+            | sed "s/barebones_watchface/$crate_name_underscore/" \
+            | sed "s/BarebonesWatchFace/$struct_name/" \
+             >mynewt/wasm/src/lib.rs.new
+        cp mynewt/wasm/src/lib.rs.new mynewt/wasm/src/lib.rs
+        rm mynewt/wasm/src/lib.rs.new
+        echo Patched mynewt/wasm/src/lib.rs...
+        cat mynewt/wasm/src/lib.rs
 
     - name: Build Rust+LVGL for WebAssembly
       run:  |
