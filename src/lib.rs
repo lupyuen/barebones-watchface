@@ -37,7 +37,7 @@ use watchface::lvgl::mynewt::{
 use watchface::lvgl::{
     self,
     core::obj,
-    objx::label,
+    widgets::label,
 };
 use watchface::{
     BluetoothState,
