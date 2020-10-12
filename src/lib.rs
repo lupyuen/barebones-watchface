@@ -201,9 +201,9 @@ impl BarebonesWatchFace {
             let color = 
                 match &state.bluetooth {
                     BluetoothState::BLUETOOTH_STATE_INACTIVE     => "#000000",  //  Black
-                    BluetoothState::BLUETOOTH_STATE_ADVERTISING  => "#5794f2",  //  Blue
-                    BluetoothState::BLUETOOTH_STATE_DISCONNECTED => "#f2495c",  //  Red
-                    BluetoothState::BLUETOOTH_STATE_CONNECTED    => "#37872d",  //  Dark Green
+                    BluetoothState::BLUETOOTH_STATE_ADVERTISING  => "#0000ff",  //  Blue
+                    BluetoothState::BLUETOOTH_STATE_DISCONNECTED => "#ff0000",  //  Red
+                    BluetoothState::BLUETOOTH_STATE_CONNECTED    => "#00ff00",  //  Green
                 };
 
             //  Format the Bluetooth status and set the label
