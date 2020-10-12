@@ -152,51 +152,39 @@ impl BarebonesWatchFace {
 
     /// Populate the Time and Date Labels with the time and date
     fn update_date_time(&self, state: &WatchFaceState) -> MynewtResult<()> {
-        //  Create a string buffer to format the time
-        static mut TIME_BUF: String = new_string();
-
         //  Format the time as "12:34" and set the label
-        unsafe {                  //  Unsafe because TIME_BUF is a mutable static
-            TIME_BUF.clear();     //  Erase the buffer
+        let mut buf = new_string();
+        write!(
+            &mut buf,         //  Write the formatted text
+            "{:02}:{:02}\0",  //  Must terminate Rust strings with null
+            state.time.hour,
+            state.time.minute
+        ).expect("time fail");
 
-            write!(
-                &mut TIME_BUF,    //  Write the formatted text
-                "{:02}:{:02}\0",  //  Must terminate Rust strings with null
-                state.time.hour,
-                state.time.minute
-            ).expect("time fail");
-
-            label::set_text(      //  Set the label
-                self.time_label, 
-                &to_strn(&TIME_BUF)
-            ) ? ;
-        }
+        label::set_text(      //  Set the label
+            self.time_label, 
+            &to_strn(&buf)
+        ) ? ;
 
         //  Get the short day name and short month name
         let day   = get_day_name(&state.time);
         let month = get_month_name(&state.time);
 
-        //  Create a string buffer to format the date
-        static mut DATE_BUF: String = new_string();
-        
         //  Format the date as "MON 22 MAY 2020" and set the label
-        unsafe {                    //  Unsafe because DATE_BUF is a mutable static
-            DATE_BUF.clear();       //  Erase the buffer
+        let mut buf = new_string();
+        write!(
+            &mut buf,           //  Write the formatted text
+            "{} {} {} {}\n\0",  //  Must terminate Rust strings with null
+            day,
+            state.time.day,
+            month,
+            state.time.year
+        ).expect("date fail");
 
-            write!(
-                &mut DATE_BUF,      //  Write the formatted text
-                "{} {} {} {}\n\0",  //  Must terminate Rust strings with null
-                day,
-                state.time.day,
-                month,
-                state.time.year
-            ).expect("date fail");
-
-            label::set_text(        //  Set the label
-                self.date_label, 
-                &to_strn(&DATE_BUF)
-            ) ? ;
-        }
+        label::set_text(        //  Set the label
+            self.date_label, 
+            &to_strn(&buf)
+        ) ? ;
         Ok(())
     }    
     
@@ -218,24 +206,18 @@ impl BarebonesWatchFace {
                     BluetoothState::BLUETOOTH_STATE_CONNECTED    => "#37872d",  //  Dark Green
                 };
 
-                //  Create a string buffer to format the Bluetooth status
-            static mut BLUETOOTH_STATUS: String = new_string();
-
             //  Format the Bluetooth status and set the label
-            unsafe {                       //  Unsafe because BLUETOOTH_STATUS is a mutable static
-                BLUETOOTH_STATUS.clear();  //  Erase the buffer
+            let mut buf = new_string();
+            write!(
+                &mut buf,              //  Write the formatted text
+                "{} \u{F293}#\0",      //  LV_SYMBOL_BLUETOOTH. Must terminate Rust strings with null.
+                color
+            ).expect("bt fail");
 
-                write!(
-                    &mut BLUETOOTH_STATUS, //  Write the formatted text
-                    "{} \u{F293}#\0",      //  LV_SYMBOL_BLUETOOTH. Must terminate Rust strings with null.
-                    color
-                ).expect("bt fail");
-
-                label::set_text(           //  Set the label
-                    self.bluetooth_label, 
-                    &to_strn(&BLUETOOTH_STATUS)
-                ) ? ;
-            }
+            label::set_text(           //  Set the label
+                self.bluetooth_label, 
+                &to_strn(&buf)
+            ) ? ;
         }
         Ok(())
     }
@@ -258,27 +240,21 @@ impl BarebonesWatchFace {
             if state.powered { "\u{F0E7}" }  //  LV_SYMBOL_CHARGE
             else             { " " };
 
-        //  Create a string buffer to format the Power Indicator
-        static mut BATTERY_STATUS: String = new_string();
+        //  Format the Power Indicator and set the label
+        let mut buf = new_string();
+        write!(
+            &mut buf,                    //  Write the formatted text
+            "{} {}%{}#\nRUST ({}mV)\0",  //  Must terminate Rust strings with null
+            color,
+            percentage,
+            symbol,
+            state.millivolts
+        ).expect("batt fail");
 
-        //  Format thePower Indicator and set the label
-        unsafe {                             //  Unsafe because BATTERY_STATUS is a mutable static
-            BATTERY_STATUS.clear();          //  Erase the buffer
-
-            write!(
-                &mut BATTERY_STATUS, 
-                "{} {}%{}#\nRUST ({}mV)\0",  //  Must terminate Rust strings with null
-                color,
-                percentage,
-                symbol,
-                state.millivolts
-            ).expect("batt fail");
-
-            label::set_text(
-                self.power_label, 
-                &to_strn(&BATTERY_STATUS)
-            ) ? ; 
-        }
+        label::set_text(
+            self.power_label, 
+            &to_strn(&buf)
+        ) ? ; 
         obj::align(
             self.power_label, screen, 
             obj::LV_ALIGN_IN_TOP_RIGHT, 0, 0
