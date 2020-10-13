@@ -199,7 +199,7 @@ jobs:
         echo Patched mynewt/wasm/Cargo.toml...
         cat mynewt/wasm/Cargo.toml
 
-        # TODO: Change mynewt/wasm/src/lib.rs from
+        # Change mynewt/wasm/src/lib.rs from
         #   use barebones_watchface::watchface::lvgl::mynewt::fill_zero;
         #   use barebones_watchface::watchface::{self, WatchFace};
         #   type WatchFaceType = barebones_watchface::BarebonesWatchFace;
