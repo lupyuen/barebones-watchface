@@ -269,35 +269,39 @@ impl BarebonesWatchFace {
 
 /// Get month short name
 fn get_month_name(time: &WatchFaceTime) -> String {
-    match time.month {
-        1  => String::from("JAN"),
-        2  => String::from("FEB"),
-        3  => String::from("MAR"),
-        4  => String::from("APR"),
-        5  => String::from("MAY"),
-        6  => String::from("JUN"),
-        7  => String::from("JUL"),
-        8  => String::from("AUG"),
-        9  => String::from("SEP"),
-        10 => String::from("OCT"),
-        11 => String::from("NOV"),
-        12 => String::from("DEC"),
-        _  => String::from("???"),
-    }
+    String::from(
+        match time.month {
+            1  => "JAN",
+            2  => "FEB",
+            3  => "MAR",
+            4  => "APR",
+            5  => "MAY",
+            6  => "JUN",
+            7  => "JUL",
+            8  => "AUG",
+            9  => "SEP",
+            10 => "OCT",
+            11 => "NOV",
+            12 => "DEC",
+            _  => "???",
+        }    
+    )
 }
 
 /// Get day short name
 fn get_day_name(time: & WatchFaceTime) -> String {
-    match time.day_of_week {
-        0  => String::from("SUN"),
-        1  => String::from("MON"),
-        2  => String::from("TUE"),
-        3  => String::from("WED"),
-        4  => String::from("THU"),
-        5  => String::from("FRI"),
-        6  => String::from("SAT"),
-        _  => String::from("???"),
-    }
+    String::from(
+        match time.day_of_week {
+            0  => "SUN",
+            1  => "MON",
+            2  => "TUE",
+            3  => "WED",
+            4  => "THU",
+            5  => "FRI",
+            6  => "SAT",
+            _  => "???",
+        }
+    )
 }
 
 ///////////////////////////////////////////////////////////////////////////////
