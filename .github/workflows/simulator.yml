@@ -51,31 +51,50 @@ jobs:
         key:  ${{ runner.os }}-build-${{ env.cache-name }}
         restore-keys: ${{ runner.os }}-build-${{ env.cache-name }}
 
-    - name: Install emscripten
-      if:   steps.cache-emsdk.outputs.cache-hit != 'true'  # Install emscripten if not found in cache
+    # We download emscripten instead of building from source because it changes often and causes emcc build errors
+    - name: Download emscripten
+      if:   steps.cache-emsdk.outputs.cache-hit != 'true'  # Download emscripten if not found in cache
       run:  |
-        # Based on https://emscripten.org/docs/getting_started/downloads.html
+        # Download the emscripten binary from lvgl-wasm
         cd /tmp
+        curl -L https://github.com/AppKaki/lvgl-wasm/releases/download/v1.0.0/emsdk.tgz -o emsdk.tgz
 
-        # Get the emsdk repo
-        git clone https://github.com/emscripten-core/emsdk.git
-
-        # Enter that directory
-        cd emsdk
-
-        # Download and install the latest SDK tools.
-        ./emsdk install latest
-
-        # Make the "latest" SDK "active" for the current user. (writes .emscripten file)
-        ./emsdk activate latest
+        # Unzip to /tmp/emsdk
+        tar xzf emsdk.tgz
+        rm emsdk.tgz
 
         # Activate PATH and other environment variables in the current terminal
-        source ./emsdk_env.sh
+        source /tmp/emsdk/emsdk_env.sh
 
         # Show version
         emcc --version
         emcc --version        
 
+    # - name: Install emscripten from source
+    #   if:   steps.cache-emsdk.outputs.cache-hit != 'true'  # Install emscripten if not found in cache
+    #   run:  |
+    #     # Based on https://emscripten.org/docs/getting_started/downloads.html
+    #     cd /tmp
+
+    #     # Get the emsdk repo
+    #     git clone https://github.com/emscripten-core/emsdk.git
+
+    #     # Enter that directory
+    #     cd emsdk
+
+    #     # Download and install the latest SDK tools.
+    #     ./emsdk install latest
+
+    #     # Make the "latest" SDK "active" for the current user. (writes .emscripten file)
+    #     ./emsdk activate latest
+
+    #     # Activate PATH and other environment variables in the current terminal
+    #     source ./emsdk_env.sh
+
+    #     # Show version
+    #     emcc --version
+    #     emcc --version      
+       
     - name: Check cache for wabt
       id:   cache-wabt
       uses: actions/cache@v2
@@ -86,16 +105,28 @@ jobs:
         key:  ${{ runner.os }}-build-${{ env.cache-name }}
         restore-keys: ${{ runner.os }}-build-${{ env.cache-name }}
 
-    - name: Install wabt
-      if:   steps.cache-wabt.outputs.cache-hit != 'true'  # Install wabt if not found in cache
+    # We download wabt instead of building from source because building wabt is slow
+    - name: Download wabt
+      if:   steps.cache-wabt.outputs.cache-hit != 'true'  # Download wabt if not found in cache
       run:  |
+        # Download the wabt binary from lvgl-wasm
         cd /tmp
-        git clone --recursive https://github.com/WebAssembly/wabt
-        cd wabt
-        mkdir build
-        cd build
-        cmake ..
-        cmake --build .
+        curl -L https://github.com/AppKaki/lvgl-wasm/releases/download/v1.0.0/wabt.tgz -o wabt.tgz
+        
+        # Unzip to /tmp/wabt
+        tar xzf wabt.tgz
+        rm wabt.tgz
+                
+    # - name: Install wabt from source
+    #   if:   steps.cache-wabt.outputs.cache-hit != 'true'  # Install wabt if not found in cache
+    #   run:  |
+    #     cd /tmp
+    #     git clone --recursive https://github.com/WebAssembly/wabt
+    #     cd wabt
+    #     mkdir build
+    #     cd build
+    #     cmake ..
+    #     cmake --build .
 
     - name: Checkout Rust+LVGL for WebAssembly
       run:  |
@@ -227,7 +258,7 @@ jobs:
 
         # Build Rust+LVGL app: wasm/lvgl.html, lvgl.js, lvgl.wasm
         cargo build
-        make -f mynewt/Makefile
+        make -j -f mynewt/Makefile
 
         # Dump the WebAssembly modules
         wasm-objdump -x wasm/lvgl.wasm >wasm/lvgl.txt
