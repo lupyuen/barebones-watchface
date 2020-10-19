@@ -37,6 +37,7 @@ use watchface::lvgl::mynewt::{
 use watchface::lvgl::{
     self,
     core::obj,
+    themes::theme,
     widgets::label,
 };
 use watchface::{
@@ -74,6 +75,9 @@ impl WatchFace for BarebonesWatchFace {
         //  Get the active screen
         let screen = watchface::get_active_screen();
 
+        //  Get the large title font for showing the time
+        let title_font = theme::get_font_title() ? ;
+
         //  Create the widgets
         let watch_face = Self {
             //  Create a Label for Time: "00:00"
@@ -84,7 +88,8 @@ impl WatchFace for BarebonesWatchFace {
                 obj::set_width(      lbl, 240) ? ;
                 obj::set_height(     lbl, 200) ? ;
                 label::set_align(    lbl, label::LV_LABEL_ALIGN_CENTER) ? ;
-                obj::align(          lbl, screen, obj::LV_ALIGN_CENTER, 0, -30) ? ;    
+                obj::align(          lbl, screen, obj::LV_ALIGN_CENTER, 0, -30) ? ;
+                obj::set_style_local_text_font(lbl, label::LV_LABEL_PART_MAIN, obj::LV_STATE_DEFAULT, title_font) ? ;  //  Use large title font
                 lbl  //  Return the label as time_label
             },
 
