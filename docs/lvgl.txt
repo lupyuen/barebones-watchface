@@ -1137,8 +1137,8 @@ Function[1086]:
  - func[1090] sig=4 <barebones_watchface::get_day_name::h1422444cc50cb157>
  - func[1091] sig=4 <barebones_watchface::get_month_name::had01a44527584f18>
  - func[1092] sig=1 <barebones_watchface::convert_battery_voltage::h306a55d8ff3ae182>
- - func[1093] sig=5 <core::ptr::drop_in_place::h05d7e4e71ae02211>
- - func[1094] sig=11 <core::result::Result$LT$T$C$E$GT$::expect::h5d73eaafb0382c76>
+ - func[1093] sig=5 <core::ptr::drop_in_place::ha91749090af2209f>
+ - func[1094] sig=11 <core::result::Result$LT$T$C$E$GT$::expect::h77bf20e63d46c106>
  - func[1095] sig=8 <create_clock>
  - func[1096] sig=8 <refresh_clock>
  - func[1097] sig=18 <update_clock>
@@ -1366,7 +1366,7 @@ Elem[1]:
   - elem[164] = func[1072] <_$LT$heapless..string..String$LT$N$GT$$u20$as$u20$core..fmt..Display$GT$::fmt::h1cbc602d03061fa9>
   - elem[165] = func[951] <core::fmt::num::imp::_$LT$impl$u20$core..fmt..Display$u20$for$u20$u16$GT$::fmt::hf0ce3f9aac669764>
   - elem[166] = func[1039] <_$LT$$RF$T$u20$as$u20$core..fmt..Display$GT$::fmt::h90b8a6230b1d5de8>
-  - elem[167] = func[1093] <core::ptr::drop_in_place::h05d7e4e71ae02211>
+  - elem[167] = func[1093] <core::ptr::drop_in_place::ha91749090af2209f>
 Code[1086]:
  - func[34] size=5 <__wasm_call_ctors>
  - func[35] size=15 <_lv_indev_init>
@@ -2427,8 +2427,8 @@ Code[1086]:
  - func[1090] size=427 <barebones_watchface::get_day_name::h1422444cc50cb157>
  - func[1091] size=658 <barebones_watchface::get_month_name::had01a44527584f18>
  - func[1092] size=39 <barebones_watchface::convert_battery_voltage::h306a55d8ff3ae182>
- - func[1093] size=31 <core::ptr::drop_in_place::h05d7e4e71ae02211>
- - func[1094] size=219 <core::result::Result$LT$T$C$E$GT$::expect::h5d73eaafb0382c76>
+ - func[1093] size=31 <core::ptr::drop_in_place::ha91749090af2209f>
+ - func[1094] size=219 <core::result::Result$LT$T$C$E$GT$::expect::h77bf20e63d46c106>
  - func[1095] size=285 <create_clock>
  - func[1096] size=48 <refresh_clock>
  - func[1097] size=360 <update_clock>
@@ -41880,8 +41880,8 @@ Custom:
  - func[1090] <barebones_watchface::get_day_name::h1422444cc50cb157>
  - func[1091] <barebones_watchface::get_month_name::had01a44527584f18>
  - func[1092] <barebones_watchface::convert_battery_voltage::h306a55d8ff3ae182>
- - func[1093] <core::ptr::drop_in_place::h05d7e4e71ae02211>
- - func[1094] <core::result::Result$LT$T$C$E$GT$::expect::h5d73eaafb0382c76>
+ - func[1093] <core::ptr::drop_in_place::ha91749090af2209f>
+ - func[1094] <core::result::Result$LT$T$C$E$GT$::expect::h77bf20e63d46c106>
  - func[1095] <create_clock>
  - func[1096] <refresh_clock>
  - func[1097] <update_clock>
