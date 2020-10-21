@@ -137,7 +137,7 @@ impl WatchFace for BarebonesWatchFace {
     //  Update Watch Face
 
     /// Update the widgets in the Watch Face with the current state
-    fn update(&self, state: &WatchFaceState) -> MynewtResult<()> {
+    fn update(&mut self, state: &WatchFaceState) -> MynewtResult<()> {
         //  Populate the Time and Date Labels
         self.update_date_time(state) ? ;
 
