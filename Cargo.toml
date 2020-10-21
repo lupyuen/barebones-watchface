@@ -1,7 +1,7 @@
 # Info about this package.
 [package]
 name          = "barebones-watchface"
-version       = "2.0.0"
+version       = "2.0.1"
 authors       = ["Lee Lup Yuen <luppy@appkaki.com>"]
 edition       = "2018"
 description   = "Barebones Watch Face for Mynewt on PineTime Smart Watch"
@@ -16,7 +16,7 @@ license       = "Apache-2.0"
 [dependencies]
 pinetime-macros      = "2.0.0"  # Safe Wrapper Macros for Mynewt on PineTime Smart Watch: https://crates.io/crates/pinetime-macros
 # pinetime-macros    = { path = "../pinetime-macros" }  # For development only
-pinetime-watchface   = "2.0.0"  # Watch Face Framework for Rust + Mynewt on PineTime Smart Watch: https://crates.io/crates/pinetime-watchface
+pinetime-watchface   = "2.0.1"  # Watch Face Framework for Rust + Mynewt on PineTime Smart Watch: https://crates.io/crates/pinetime-watchface
 # pinetime-watchface = { path = "../pinetime-watchface" }  # For development only
 arrayvec             = { version = "0.5.1", default-features = false }
 cortex-m             = { version = "0.6.1", features = [ "inline-asm" ] }  # Arm Cortex-M utilities: https://crates.io/crates/cortex-m
