@@ -1,6 +1,6 @@
 # Barebones Watch Face for Rust + Mynewt on PineTime Smart Watch
 
-![Barebones Watch Face for Rust + Mynewt on PineTime Smart Watch](https://lupyuen.github.io/images/timesync-title.png)
+![Barebones Watch Face for Rust + Mynewt on PineTime Smart Watch](watchface.png)
 
 [__Preview this Watch Face in your web browser__](https://lupyuen.github.io/barebones-watchface/lvgl.html)
 
